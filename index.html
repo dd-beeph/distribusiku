@@ -45,7 +45,7 @@
 <section class="pageview" id="page-inventory"><div class="welcome"><div><h1>Persediaan</h1><p>Pantau stok di tiga gudang.</p></div><button class="primary" onclick="alert('Penyesuaian stok memerlukan persetujuan sesuai hak akses.')">＋ Pengajuan Penyesuaian</button></div><div class="card"><h3>Ringkasan stok</h3><p class="empty">Stok akan ditampilkan setelah tabel transaksi stok dan integrasinya selesai.</p></div></section>
 <section class="pageview" id="page-expenses"><div class="welcome"><div><h1>Biaya Operasional</h1><p>Catat biaya harian tim gudang dan pengiriman.</p></div><button class="primary" onclick="alert('Form biaya akan diaktifkan saat integrasi database.')">＋ Catat Biaya</button></div><div class="card"><h3>Daftar biaya</h3><p class="empty">Belum terhubung ke database.</p></div></section>
 <section class="pageview" id="page-ledger"><div class="welcome"><div><h1>Jurnal & Buku Besar</h1><p>Ringkasan akuntansi dan pencatatan transaksi.</p></div></div><div class="notice">Modul akuntansi penuh akan dibangun setelah alur penjualan, pembelian, pembayaran, dan persediaan ditetapkan.</div><div class="card"><h3>Jurnal umum</h3><p class="empty">Belum ada jurnal. Data contoh dashboard bukan data akuntansi nyata.</p></div></section>
-<section class="pageview" id="page-master"><div class="welcome"><div><h1>Data Master</h1><p>Data pelanggan, produk, gudang, dan satuan dibaca dari Supabase.</p></div><button class="primary" id="refreshMasterBtn" type="button">Muat ulang data</button></div><div id="masterStatus" class="notice">Menunggu koneksi database...</div><div class="card" style="margin-bottom:18px"><div class="cardtitle"><div><h3>Pelanggan</h3><div class="sub" id="customerCount">Memuat...</div></div><button class="primary" id="showCustomerFormBtn" type="button">＋ Tambah Pelanggan</button></div><form id="customerForm" style="display:none"><div class="formgrid"><div class="field"><label for="customerCode">Kode pelanggan (otomatis)</label><input id="customerCode" maxlength="4" placeholder="Dibuat otomatis oleh sistem" readonly></div><div class="field"><label for="customerName">Nama pelanggan *</label><input id="customerName" required maxlength="200" placeholder="Nama toko/perusahaan"></div><div class="field"><label for="customerPhone">Nomor telepon</label><input id="customerPhone" maxlength="50" placeholder="Nomor telepon"></div><div class="field"><label for="customerCredit">Batas kredit (Rp)</label><input id="customerCredit" type="number" min="0" step="1" value="0"></div><div class="field"><label for="customerTerm">Tempo pembayaran (hari)</label><input id="customerTerm" type="number" min="0" step="1" value="14" required></div><div class="field"><label for="customerAddress">Alamat</label><textarea id="customerAddress" rows="2" placeholder="Alamat pelanggan"></textarea></div></div><label style="display:flex;align-items:center;gap:8px;margin:14px 0"><input id="customerActive" type="checkbox" checked style="width:auto"> Pelanggan aktif</label><div style="display:flex;gap:10px;flex-wrap:wrap"><button class="primary" id="saveCustomerBtn" type="submit">Simpan Pelanggan</button><button class="linkbtn" id="cancelCustomerBtn" type="button">Batal</button></div><p id="customerFormMessage" role="status" style="margin-bottom:0;overflow-wrap:anywhere"></p></form><div class="tablewrap"><table><thead><tr><th>Kode</th><th>Nama</th><th>Telepon</th><th>Status</th></tr></thead><tbody id="customersBody"><tr><td colspan="4">Memuat data...</td></tr></tbody></table></div></div><div class="card"><div class="cardtitle"><div><h3>Produk</h3><div class="sub" id="productCount">Memuat...</div></div></div><div class="tablewrap"><table><thead><tr><th>Kode</th><th>Nama produk</th><th>Satuan dasar</th><th>Status</th></tr></thead><tbody id="productsBody"><tr><td colspan="4">Memuat data...</td></tr></tbody></table></div></div><div class="card"><div class="cardtitle"><div><h3>Gudang</h3><div class="sub" id="warehouseCount">Memuat...</div></div></div><div class="tablewrap"><table><thead><tr><th>Kode</th><th>Nama gudang</th><th>Alamat</th><th>Status</th></tr></thead><tbody id="warehousesBody"><tr><td colspan="4">Memuat data...</td></tr></tbody></table></div></div><div class="card"><div class="cardtitle"><div><h3>Satuan</h3><div class="sub" id="unitCount">Memuat...</div></div></div><div class="tablewrap"><table><thead><tr><th>Kode</th><th>Nama satuan</th></tr></thead><tbody id="unitsBody"><tr><td colspan="2">Memuat data...</td></tr></tbody></table></div></div></div></section>
+<section class="pageview" id="page-master"><div class="welcome"><div><h1>Data Master</h1><p>Data pelanggan, produk, gudang, dan satuan dibaca dari Supabase.</p></div><button class="primary" id="refreshMasterBtn" type="button">Muat ulang data</button></div><div id="masterStatus" class="notice">Menunggu koneksi database...</div><div class="card" style="margin-bottom:18px"><div class="cardtitle"><div><h3>Pelanggan</h3><div class="sub" id="customerCount">Memuat...</div></div><button class="primary" id="showCustomerFormBtn" type="button">＋ Tambah Pelanggan</button></div><form id="customerForm" style="display:none"><div class="formgrid"><div class="field"><label for="customerCode">Kode pelanggan (otomatis)</label><input id="customerCode" maxlength="4" placeholder="Dibuat otomatis oleh sistem" readonly></div><div class="field"><label for="customerName">Nama pelanggan *</label><input id="customerName" required maxlength="200" placeholder="Nama toko/perusahaan"></div><div class="field"><label for="customerPhone">Nomor telepon</label><input id="customerPhone" maxlength="50" placeholder="Nomor telepon"></div><div class="field"><label for="customerCredit">Batas kredit (Rp)</label><input id="customerCredit" type="number" min="0" step="1" value="0"></div><div class="field"><label for="customerTerm">Tempo pembayaran (hari)</label><input id="customerTerm" type="number" min="0" step="1" value="14" required></div><div class="field"><label for="customerAddress">Alamat</label><textarea id="customerAddress" rows="2" placeholder="Alamat pelanggan"></textarea></div></div><label style="display:flex;align-items:center;gap:8px;margin:14px 0"><input id="customerActive" type="checkbox" checked style="width:auto"> Pelanggan aktif</label><div style="display:flex;gap:10px;flex-wrap:wrap"><button class="primary" id="saveCustomerBtn" type="submit">Simpan Pelanggan</button><button class="linkbtn" id="cancelCustomerBtn" type="button">Batal</button></div><p id="customerFormMessage" role="status" style="margin-bottom:0;overflow-wrap:anywhere"></p></form><div class="tablewrap"><table><thead><tr><th>Kode</th><th>Nama</th><th>Telepon</th><th>Status</th></tr></thead><tbody id="customersBody"><tr><td colspan="4">Memuat data...</td></tr></tbody></table></div></div><div class="card"><div class="cardtitle"><div><h3>Produk</h3><div class="sub" id="productCount">Memuat...</div></div><button class="primary" id="showProductFormBtn" type="button">＋ Tambah Produk</button></div><form id="productForm" style="display:none"><div class="formgrid"><div class="field"><label for="productCode">Kode produk *</label><input id="productCode" required maxlength="50" placeholder="Contoh: AQUA-600"></div><div class="field"><label for="productName">Nama produk *</label><input id="productName" required maxlength="200" placeholder="Contoh: Aqua 600 ml"></div><div class="field"><label for="productBaseUnit">Satuan dasar *</label><select id="productBaseUnit" required><option value="">Pilih satuan</option></select></div></div><label style="display:flex;align-items:center;gap:8px;margin:14px 0"><input id="productActive" type="checkbox" checked style="width:auto"> Produk aktif</label><div style="display:flex;gap:10px;flex-wrap:wrap"><button class="primary" id="saveProductBtn" type="submit">Simpan Produk</button><button class="linkbtn" id="cancelProductBtn" type="button">Batal</button></div><p id="productFormMessage" role="status" style="margin-bottom:0;overflow-wrap:anywhere"></p></form><div class="tablewrap"><table><thead><tr><th>Kode</th><th>Nama produk</th><th>Satuan dasar</th><th>Status</th></tr></thead><tbody id="productsBody"><tr><td colspan="4">Memuat data...</td></tr></tbody></table></div></div><div class="card"><div class="cardtitle"><div><h3>Gudang</h3><div class="sub" id="warehouseCount">Memuat...</div></div></div><div class="tablewrap"><table><thead><tr><th>Kode</th><th>Nama gudang</th><th>Alamat</th><th>Status</th></tr></thead><tbody id="warehousesBody"><tr><td colspan="4">Memuat data...</td></tr></tbody></table></div></div><div class="card"><div class="cardtitle"><div><h3>Satuan</h3><div class="sub" id="unitCount">Memuat...</div></div></div><div class="tablewrap"><table><thead><tr><th>Kode</th><th>Nama satuan</th></tr></thead><tbody id="unitsBody"><tr><td colspan="2">Memuat data...</td></tr></tbody></table></div></div></div></section>
 </div></main></div>
 <div id="authGate">
   <form class="auth-card" id="loginForm">
@@ -95,6 +95,10 @@ async function loadMasterData(){
   }
   const customers=customersRes.data||[], products=productsRes.data||[], units=unitsRes.data||[], warehouses=warehousesRes.data||[];
   const unitMap=new Map(units.map(u=>[u.id,u.name||u.code||'-']));
+  const unitSelect=document.getElementById('productBaseUnit');
+  const selectedUnit=unitSelect.value;
+  unitSelect.innerHTML='<option value="">Pilih satuan</option>'+units.map(u=>`<option value="${escHtml(u.id)}">${escHtml(u.name||u.code||'-')} (${escHtml(u.code||'')})</option>`).join('');
+  if(units.some(u=>String(u.id)===selectedUnit)) unitSelect.value=selectedUnit;
   document.getElementById('customerCount').textContent=customers.length+' pelanggan';
   document.getElementById('productCount').textContent=products.length+' produk';
   document.getElementById('warehouseCount').textContent=warehouses.length+' gudang';
@@ -107,6 +111,40 @@ async function loadMasterData(){
   status.style.color='#12815d';
 }
 document.getElementById('refreshMasterBtn').addEventListener('click',loadMasterData);
+const productForm=document.getElementById('productForm');
+const productFormMessage=document.getElementById('productFormMessage');
+document.getElementById('showProductFormBtn').addEventListener('click',()=>{
+  productForm.style.display='block';
+  productFormMessage.textContent='';
+  document.getElementById('productCode').focus();
+});
+document.getElementById('cancelProductBtn').addEventListener('click',()=>{
+  productForm.reset();
+  document.getElementById('productActive').checked=true;
+  productForm.style.display='none';
+  productFormMessage.textContent='';
+});
+productForm.addEventListener('submit',async(event)=>{
+  event.preventDefault();
+  if(!supabaseClient){productFormMessage.style.color='var(--red)';productFormMessage.textContent='Koneksi Supabase belum siap. Muat ulang halaman dan login kembali.';return;}
+  const saveBtn=document.getElementById('saveProductBtn');
+  saveBtn.disabled=true;saveBtn.textContent='Menyimpan...';
+  productFormMessage.style.color='var(--muted)';productFormMessage.textContent='Menyimpan produk ke database...';
+  const payload={
+    product_code:document.getElementById('productCode').value.trim(),
+    name:document.getElementById('productName').value.trim(),
+    base_unit_id:Number(document.getElementById('productBaseUnit').value),
+    is_active:document.getElementById('productActive').checked
+  };
+  const {error}=await supabaseClient.from('products').insert(payload);
+  saveBtn.disabled=false;saveBtn.textContent='Simpan Produk';
+  if(error){productFormMessage.style.color='var(--red)';productFormMessage.textContent='Gagal menyimpan: '+error.message;return;}
+  productFormMessage.style.color='var(--green)';productFormMessage.textContent='Produk berhasil disimpan.';
+  productForm.reset();
+  document.getElementById('productActive').checked=true;
+  await loadMasterData();
+  productForm.style.display='none';
+});
 const customerForm=document.getElementById('customerForm');
 const customerFormMessage=document.getElementById('customerFormMessage');
 document.getElementById('showCustomerFormBtn').addEventListener('click',()=>{
