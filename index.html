@@ -103,7 +103,7 @@ async function loadMasterData(){
   document.getElementById('productCount').textContent=products.length+' produk';
   document.getElementById('warehouseCount').textContent=warehouses.length+' gudang';
   document.getElementById('unitCount').textContent=units.length+' satuan';
-  setTableRows('customersBody',customers.map(c=>`<tr><td>${escHtml(c.customer_code||'-')}</td><td>${escHtml(c.name)}</td><td>${escHtml(c.phone||'-')}</td><td>${c.is_active?'Aktif':'Nonaktif'}</td><td><button type="button" class="linkbtn" data-edit-customer="${escHtml(c.id)}">Edit</button></td></tr>`),5);
+  setTableRows('customersBody',customers.map(c=>`<tr><td>${escHtml(c.customer_code||'-')}</td><td>${escHtml(c.name)}</td><td>${escHtml(c.phone||'-')}</td><td>${c.is_active?'Aktif':'Nonaktif'}</td><td><button type="button" class="linkbtn" data-edit-customer="${escHtml(c.id)}">Edit</button> <button type="button" class="linkbtn" data-toggle-customer="${escHtml(c.id)}" data-active="${c.is_active?'true':'false'}">${c.is_active?'Nonaktifkan':'Aktifkan'}</button></td></tr>`),5);
   setTableRows('productsBody',products.map(p=>`<tr><td>${escHtml(p.product_code||'-')}</td><td>${escHtml(p.name)}</td><td>${escHtml(unitMap.get(p.base_unit_id)||'-')}</td><td>${p.is_active?'Aktif':'Nonaktif'}</td><td><button type="button" class="linkbtn" data-edit-product="${escHtml(p.id)}">Edit</button> <button type="button" class="linkbtn" data-toggle-product="${escHtml(p.id)}" data-active="${p.is_active?'true':'false'}">${p.is_active?'Nonaktifkan':'Aktifkan'}</button></td></tr>`),5);
   setTableRows('warehousesBody',warehouses.map(w=>`<tr><td>${escHtml(w.code||'-')}</td><td>${escHtml(w.name)}</td><td>${escHtml(w.address||'-')}</td><td>${w.is_active?'Aktif':'Nonaktif'}</td></tr>`),4);
   setTableRows('unitsBody',units.map(u=>`<tr><td>${escHtml(u.code||'-')}</td><td>${escHtml(u.name||'-')}</td></tr>`),2);
@@ -210,6 +210,20 @@ document.getElementById('cancelCustomerBtn').addEventListener('click',()=>{
   customerForm.style.display='none';
 });
 document.getElementById('customersBody').addEventListener('click',async(event)=>{
+  const toggleButton=event.target.closest('[data-toggle-customer]');
+  if(toggleButton){
+    const customerId=toggleButton.getAttribute('data-toggle-customer');
+    const currentlyActive=toggleButton.getAttribute('data-active')==='true';
+    const nextStatus=currentlyActive?'nonaktif':'aktif';
+    if(!confirm(`Yakin ingin mengubah pelanggan ini menjadi ${nextStatus}? Data pelanggan dan riwayat transaksinya tidak dihapus.`))return;
+    if(!supabaseClient){document.getElementById('masterStatus').style.color='#b42318';document.getElementById('masterStatus').textContent='Koneksi Supabase belum siap. Muat ulang halaman dan login kembali.';return;}
+    toggleButton.disabled=true;toggleButton.textContent='Menyimpan...';
+    const {error}=await supabaseClient.from('customers').update({is_active:!currentlyActive}).eq('id',customerId);
+    if(error){toggleButton.disabled=false;toggleButton.textContent=currentlyActive?'Nonaktifkan':'Aktifkan';document.getElementById('masterStatus').style.color='#b42318';document.getElementById('masterStatus').textContent='Gagal mengubah status pelanggan: '+error.message;return;}
+    document.getElementById('masterStatus').style.color='#12815d';document.getElementById('masterStatus').textContent='Status pelanggan berhasil diubah.';
+    await loadMasterData();
+    return;
+  }
   const button=event.target.closest('[data-edit-customer]');
   if(!button)return;
   if(!supabaseClient){customerFormMessage.style.color='var(--red)';customerFormMessage.textContent='Koneksi Supabase belum siap. Muat ulang halaman dan login kembali.';return;}
