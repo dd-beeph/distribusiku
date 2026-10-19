@@ -45,7 +45,7 @@
 <section class="pageview" id="page-inventory"><div class="welcome"><div><h1>Persediaan</h1><p>Pantau stok di tiga gudang.</p></div><button class="primary" onclick="alert('Penyesuaian stok memerlukan persetujuan sesuai hak akses.')">＋ Pengajuan Penyesuaian</button></div><div class="card"><h3>Ringkasan stok</h3><p class="empty">Stok akan ditampilkan setelah tabel transaksi stok dan integrasinya selesai.</p></div></section>
 <section class="pageview" id="page-expenses"><div class="welcome"><div><h1>Biaya Operasional</h1><p>Catat biaya harian tim gudang dan pengiriman.</p></div><button class="primary" onclick="alert('Form biaya akan diaktifkan saat integrasi database.')">＋ Catat Biaya</button></div><div class="card"><h3>Daftar biaya</h3><p class="empty">Belum terhubung ke database.</p></div></section>
 <section class="pageview" id="page-ledger"><div class="welcome"><div><h1>Jurnal & Buku Besar</h1><p>Ringkasan akuntansi dan pencatatan transaksi.</p></div></div><div class="notice">Modul akuntansi penuh akan dibangun setelah alur penjualan, pembelian, pembayaran, dan persediaan ditetapkan.</div><div class="card"><h3>Jurnal umum</h3><p class="empty">Belum ada jurnal. Data contoh dashboard bukan data akuntansi nyata.</p></div></section>
-<section class="pageview" id="page-master"><div class="welcome"><div><h1>Data Master</h1><p>Kelola pelanggan, produk, satuan, gudang, dan supplier.</p></div></div><div class="stats"><div class="card"><div class="stathead">Pelanggan <span class="staticon">♙</span></div><div class="value">Pelanggan</div><div class="sub">Daftar dan batas kredit</div></div><div class="card"><div class="stathead">Produk <span class="staticon">▣</span></div><div class="value">Produk</div><div class="sub">Kode, satuan, harga</div></div><div class="card"><div class="stathead">Gudang <span class="staticon">⌂</span></div><div class="value">3 gudang</div><div class="sub">Lokasi persediaan</div></div><div class="card"><div class="stathead">Satuan <span class="staticon">⇄</span></div><div class="value">Konversi</div><div class="sub">Dus, karton, botol, dll.</div></div></div><div class="card"><p class="empty">Halaman data master akan dihubungkan ke tabel Supabase yang sudah dibuat.</p></div></section>
+<section class="pageview" id="page-master"><div class="welcome"><div><h1>Data Master</h1><p>Data berikut dibaca langsung dari Supabase. Tahap ini masih menampilkan data; formulir tambah/edit akan dibuat setelah koneksi baca berhasil.</p></div><button class="primary" id="refreshMasterBtn" type="button">Muat ulang data</button></div><div id="masterStatus" class="notice">Menunggu koneksi database...</div><div class="grid2"><div class="card"><div class="cardtitle"><div><h3>Pelanggan</h3><div class="sub" id="customerCount">Memuat...</div></div></div><div class="tablewrap"><table><thead><tr><th>Kode</th><th>Nama</th><th>Telepon</th><th>Status</th></tr></thead><tbody id="customersBody"><tr><td colspan="4">Memuat data...</td></tr></tbody></table></div></div><div class="card"><div class="cardtitle"><div><h3>Produk</h3><div class="sub" id="productCount">Memuat...</div></div></div><div class="tablewrap"><table><thead><tr><th>Kode</th><th>Nama produk</th><th>Satuan dasar</th><th>Status</th></tr></thead><tbody id="productsBody"><tr><td colspan="4">Memuat data...</td></tr></tbody></table></div></div><div class="card"><div class="cardtitle"><div><h3>Gudang</h3><div class="sub" id="warehouseCount">Memuat...</div></div></div><div class="tablewrap"><table><thead><tr><th>Kode</th><th>Nama gudang</th><th>Alamat</th><th>Status</th></tr></thead><tbody id="warehousesBody"><tr><td colspan="4">Memuat data...</td></tr></tbody></table></div></div><div class="card"><div class="cardtitle"><div><h3>Satuan</h3><div class="sub" id="unitCount">Memuat...</div></div></div><div class="tablewrap"><table><thead><tr><th>Kode</th><th>Nama satuan</th></tr></thead><tbody id="unitsBody"><tr><td colspan="2">Memuat data...</td></tr></tbody></table></div></div></div></section>
 </div></main></div>
 <div id="authGate">
   <form class="auth-card" id="loginForm">
@@ -65,9 +65,48 @@
 <script src="./supabase-config.js"></script>
 <script>
 const names={dashboard:'Dashboard',sales:'Sales Order',invoices:'Faktur Penjualan',payments:'Pembayaran',purchases:'Pembelian Supplier',inventory:'Persediaan',expenses:'Biaya Operasional',ledger:'Jurnal & Buku Besar',master:'Data Master'};
-function showPage(p){document.querySelectorAll('.pageview').forEach(x=>x.classList.remove('show'));const target=document.getElementById('page-'+p);if(target)target.classList.add('show');document.querySelectorAll('#nav button').forEach(b=>b.classList.toggle('active',b.dataset.page===p));document.getElementById('crumb').textContent=names[p]||p;document.getElementById('topTitle').textContent=names[p]||p;window.scrollTo(0,0);if(innerWidth<=650)document.querySelector('.side').style.display='none'}
+function showPage(p){document.querySelectorAll('.pageview').forEach(x=>x.classList.remove('show'));const target=document.getElementById('page-'+p);if(target)target.classList.add('show');document.querySelectorAll('#nav button').forEach(b=>b.classList.toggle('active',b.dataset.page===p));document.getElementById('crumb').textContent=names[p]||p;document.getElementById('topTitle').textContent=names[p]||p;window.scrollTo(0,0);if(innerWidth<=650)document.querySelector('.side').style.display='none';if(p==='master'&&supabaseClient)loadMasterData()}
 document.querySelectorAll('button[data-page]').forEach(b=>b.addEventListener('click',()=>showPage(b.dataset.page)));
 function toggleNav(){const s=document.querySelector('.side');s.style.display=s.style.display==='block'?'none':'block';s.style.position='absolute';s.style.zIndex='5';s.style.width='245px';s.style.minHeight='100vh';s.style.boxShadow='8px 0 30px #0002'}
+
+
+// Tahap pertama integrasi Data Master: membaca data nyata dari tabel Supabase.
+const escHtml=(value)=>String(value??'').replace(/[&<>"']/g,ch=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
+function setTableRows(id, rows, colspan, emptyText='Belum ada data.'){
+  const body=document.getElementById(id);
+  if(!rows||rows.length===0){body.innerHTML=`<tr><td colspan="${colspan}">${emptyText}</td></tr>`;return;}
+  body.innerHTML=rows.join('');
+}
+async function loadMasterData(){
+  const status=document.getElementById('masterStatus');
+  status.textContent='Sedang mengambil data dari Supabase...';
+  status.style.color='';
+  const [customersRes,productsRes,unitsRes,warehousesRes]=await Promise.all([
+    supabaseClient.from('customers').select('customer_code,name,phone,is_active').order('name'),
+    supabaseClient.from('products').select('product_code,name,base_unit_id,is_active').order('name'),
+    supabaseClient.from('units').select('id,code,name').order('name'),
+    supabaseClient.from('warehouses').select('code,name,address,is_active').order('name')
+  ]);
+  const errors=[customersRes,productsRes,unitsRes,warehousesRes].filter(r=>r.error);
+  if(errors.length){
+    status.textContent='Data belum dapat dibaca: '+errors.map(r=>r.error.message).join(' | ')+'. Periksa kebijakan akses (RLS) jika diperlukan.';
+    status.style.color='#b42318';
+    return;
+  }
+  const customers=customersRes.data||[], products=productsRes.data||[], units=unitsRes.data||[], warehouses=warehousesRes.data||[];
+  const unitMap=new Map(units.map(u=>[u.id,u.name||u.code||'-']));
+  document.getElementById('customerCount').textContent=customers.length+' pelanggan';
+  document.getElementById('productCount').textContent=products.length+' produk';
+  document.getElementById('warehouseCount').textContent=warehouses.length+' gudang';
+  document.getElementById('unitCount').textContent=units.length+' satuan';
+  setTableRows('customersBody',customers.map(c=>`<tr><td>${escHtml(c.customer_code||'-')}</td><td>${escHtml(c.name)}</td><td>${escHtml(c.phone||'-')}</td><td>${c.is_active?'Aktif':'Nonaktif'}</td></tr>`),4);
+  setTableRows('productsBody',products.map(p=>`<tr><td>${escHtml(p.product_code||'-')}</td><td>${escHtml(p.name)}</td><td>${escHtml(unitMap.get(p.base_unit_id)||'-')}</td><td>${p.is_active?'Aktif':'Nonaktif'}</td></tr>`),4);
+  setTableRows('warehousesBody',warehouses.map(w=>`<tr><td>${escHtml(w.code||'-')}</td><td>${escHtml(w.name)}</td><td>${escHtml(w.address||'-')}</td><td>${w.is_active?'Aktif':'Nonaktif'}</td></tr>`),4);
+  setTableRows('unitsBody',units.map(u=>`<tr><td>${escHtml(u.code||'-')}</td><td>${escHtml(u.name||'-')}</td></tr>`),2);
+  status.textContent='Koneksi berhasil. Data pada halaman ini dibaca langsung dari database Supabase.';
+  status.style.color='#12815d';
+}
+document.getElementById('refreshMasterBtn').addEventListener('click',loadMasterData);
 
 // Supabase authentication: publishable key only; never place service_role/secret keys in the browser.
 let supabaseClient = null;
