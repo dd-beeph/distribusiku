@@ -38,7 +38,7 @@
 <div class="grid2"><div class="card"><div class="cardtitle"><div><h3>Ringkasan penjualan</h3><div class="sub">Performa penjualan minggu ini</div></div><button class="linkbtn" onclick="showPage('sales')">Lihat pesanan ↗</button></div><div class="chart"><div class="barcol"><div class="bar" style="height:45%"></div></div><div class="barcol"><div class="bar alt" style="height:60%"></div></div><div class="barcol"><div class="bar" style="height:53%"></div></div><div class="barcol"><div class="bar alt" style="height:76%"></div></div><div class="barcol"><div class="bar" style="height:68%"></div></div><div class="barcol"><div class="bar alt" style="height:88%"></div></div><div class="barcol"><div class="bar" style="height:72%"></div></div></div><div class="labels"><span>Sen</span><span>Sel</span><span>Rab</span><span>Kam</span><span>Jum</span><span>Sab</span><span>Min</span></div><div class="legend"><span><i class="dot"></i>Penjualan</span><span><i class="dot alt"></i>Minggu sebelumnya</span></div></div>
 <div class="card"><div class="cardtitle"><div><h3>Perlu perhatian</h3><div class="sub">Hal yang perlu ditindaklanjuti</div></div><span class="status">4 item</span></div><div class="list"><div class="rowitem"><div class="leftitem"><div class="mini">🚚</div><div><div class="itemname">Pengiriman menunggu</div><div class="itemmeta">6 pesanan perlu diproses</div></div></div><span class="status">6</span></div><div class="rowitem"><div class="leftitem"><div class="mini">💳</div><div><div class="itemname">Faktur jatuh tempo</div><div class="itemmeta">Perlu tindak lanjut pembayaran</div></div></div><span class="status red">3</span></div><div class="rowitem"><div class="leftitem"><div class="mini">📦</div><div><div class="itemname">Stok menipis</div><div class="itemmeta">Produk di bawah batas minimum</div></div></div><span class="status red">5</span></div><div class="rowitem"><div class="leftitem"><div class="mini">🧾</div><div><div class="itemname">Biaya menunggu approval</div><div class="itemmeta">Pengajuan tim gudang</div></div></div><span class="status">2</span></div></div></div></div>
 <div class="card" style="margin-top:18px"><div class="cardtitle"><div><h3>Transaksi terbaru</h3><div class="sub">Contoh tampilan daftar transaksi</div></div><button class="linkbtn" onclick="showPage('invoices')">Semua transaksi ↗</button></div><div class="tablewrap"><table><thead><tr><th>No. Transaksi</th><th>Pelanggan</th><th>Tanggal</th><th>Nilai</th><th>Status</th></tr></thead><tbody><tr><td>SO-2026-0108</td><td>Toko Sumber Rejeki</td><td>19 Okt 2026</td><td>Rp 4.250.000</td><td><span class="status green">Dikirim</span></td></tr><tr><td>SO-2026-0107</td><td>CV Berkah Jaya</td><td>19 Okt 2026</td><td>Rp 2.875.000</td><td><span class="status">Menunggu</span></td></tr><tr><td>INV-2026-0098</td><td>UD Makmur Sentosa</td><td>18 Okt 2026</td><td>Rp 6.120.000</td><td><span class="status red">Belum lunas</span></td></tr></tbody></table></div></div><div class="footerhint">Tampilan demo dengan data contoh — belum terhubung ke database Supabase.</div></section>
-<section class="pageview" id="page-sales"><div class="welcome"><div><h1>Sales Order</h1><p>Catat pesanan pelanggan sebelum barang dikirim.</p></div><button class="primary" onclick="document.getElementById('salesForm').style.display='block'">＋ Buat Sales Order</button></div><div class="notice">Alur: Sales membuat pesanan → gudang menyiapkan barang → pengiriman dicatat → kasir membuat faktur. Stok belum berkurang saat pesanan dibuat.</div><div class="card" id="salesForm" style="display:none;margin-bottom:18px"><div class="cardtitle"><h3>Form Sales Order (contoh)</h3><button class="linkbtn" onclick="document.getElementById('salesForm').style.display='none'">Tutup</button></div><div class="formgrid"><div class="field"><label>Nama pelanggan</label><input placeholder="Pilih / masukkan pelanggan"></div><div class="field"><label>Gudang asal</label><select><option>Gudang Utama</option><option>Gudang 2</option><option>Gudang 3</option></select></div><div class="field"><label>Tanggal pesanan</label><input type="date" value="2026-10-19"></div><div class="field"><label>Nomor pesanan</label><input placeholder="Dibuat otomatis pada aplikasi final"></div><div class="field"><label>Produk</label><input placeholder="Pilih produk"></div><div class="field"><label>Jumlah</label><input type="number" placeholder="0"></div><div class="field"><label>Harga jual per unit (Rp)</label><input type="number" placeholder="Masukkan harga manual"></div><div class="field"><label>Catatan</label><input placeholder="Opsional"></div></div><p style="margin-bottom:0"><button class="primary" onclick="alert('Ini hanya prototype visual. Data belum disimpan.')">Simpan contoh</button></p></div><div class="card"><div class="cardtitle"><h3>Daftar pesanan</h3><span class="sub">Data contoh</span></div><div class="tablewrap"><table><thead><tr><th>No. SO</th><th>Pelanggan</th><th>Gudang</th><th>Total</th><th>Status</th></tr></thead><tbody><tr><td>SO-2026-0108</td><td>Toko Sumber Rejeki</td><td>Utama</td><td>Rp 4.250.000</td><td><span class="status green">Dikonfirmasi</span></td></tr><tr><td>SO-2026-0107</td><td>CV Berkah Jaya</td><td>Gudang 2</td><td>Rp 2.875.000</td><td><span class="status">Draft</span></td></tr></tbody></table></div></div></section>
+<section class="pageview" id="page-sales"><div class="welcome"><div><h1>Sales Order</h1><p>Catat pesanan pelanggan sebelum barang dikirim.</p></div><button class="primary" id="showSalesFormBtn">＋ Buat Sales Order</button></div><div class="notice">Sales memilih pelanggan, produk, jumlah, dan harga jual manual. Gudang asal serta driver ditentukan saat pengiriman/faktur. Stok tidak berkurang saat SO dibuat.</div><div class="card" id="salesForm" style="display:none;margin-bottom:18px"><div class="cardtitle"><h3>Buat Sales Order</h3><button class="linkbtn" id="closeSalesFormBtn" type="button">Tutup</button></div><form id="salesOrderForm"><div class="formgrid"><div class="field"><label for="soCustomer">Pelanggan *</label><select id="soCustomer" required><option value="">Memuat pelanggan...</option></select></div><div class="field"><label for="soDate">Tanggal pesanan *</label><input id="soDate" type="date" required></div><div class="field" style="grid-column:1/-1"><label for="soNotes">Catatan pesanan</label><textarea id="soNotes" rows="2" placeholder="Opsional"></textarea></div></div><div class="cardtitle" style="margin-top:20px"><div><h3>Barang pesanan</h3><div class="sub">Harga jual diinput manual. Satuan mengikuti satuan dasar produk.</div></div><button class="linkbtn" id="addSoItemBtn" type="button">＋ Tambah Barang</button></div><div id="soItemsContainer" style="display:grid;gap:12px"></div><div style="display:flex;justify-content:flex-end;gap:10px;align-items:center;margin-top:18px;flex-wrap:wrap"><strong>Total pesanan: <span id="soTotal">Rp 0</span></strong></div><p id="salesOrderMessage" role="status" style="overflow-wrap:anywhere"></p><div style="display:flex;gap:10px;flex-wrap:wrap"><button class="primary" id="saveSalesOrderBtn" type="submit">Simpan Sales Order</button><button class="linkbtn" id="cancelSalesOrderBtn" type="button">Batal</button></div></form></div><div class="card"><div class="cardtitle"><div><h3>Daftar pesanan</h3><div class="sub" id="salesOrderCount">Memuat data dari Supabase...</div></div><button class="linkbtn" id="refreshSalesOrdersBtn" type="button">Muat Ulang</button></div><div id="salesOrderListMessage" role="status" style="margin-bottom:10px;overflow-wrap:anywhere"></div><div class="tablewrap"><table><thead><tr><th>No. SO</th><th>Tanggal</th><th>Pelanggan</th><th>Jumlah Jenis</th><th>Total</th><th>Status</th></tr></thead><tbody id="salesOrdersBody"><tr><td colspan="6">Memuat data...</td></tr></tbody></table></div></div></section>
 <section class="pageview" id="page-invoices"><div class="welcome"><div><h1>Faktur Penjualan</h1><p>Tagihkan barang sesuai hasil pengiriman.</p></div><button class="primary" onclick="alert('Form faktur akan diaktifkan saat integrasi database.')">＋ Buat Faktur</button></div><div class="notice">Kasir mencatat jumlah barang yang benar-benar diterima pelanggan. Harga hanya dapat diubah oleh Owner sesuai aturan bisnis.</div><div class="card"><h3>Daftar faktur</h3><p class="empty">Belum ada data nyata. Daftar ini akan terisi setelah Supabase dihubungkan.</p></div></section>
 <section class="pageview" id="page-payments"><div class="welcome"><div><h1>Pembayaran</h1><p>Catat pembayaran tunai, transfer, atau claim voucher.</p></div><button class="primary" onclick="alert('Form pembayaran akan diaktifkan saat integrasi database.')">＋ Catat Pembayaran</button></div><div class="card"><h3>Riwayat pembayaran</h3><p class="empty">Belum terhubung ke database.</p></div></section>
 <section class="pageview" id="page-purchases"><div class="welcome"><div><h1>Pembelian Supplier</h1><p>Kelola purchase order dan penerimaan barang.</p></div><button class="primary" onclick="alert('Form pembelian akan diaktifkan saat integrasi database.')">＋ Pembelian Baru</button></div><div class="card"><h3>Daftar pembelian</h3><p class="empty">Belum terhubung ke database.</p></div></section>
@@ -65,10 +65,111 @@
 <script src="./supabase-config.js"></script>
 <script>
 const names={dashboard:'Dashboard',sales:'Sales Order',invoices:'Faktur Penjualan',payments:'Pembayaran',purchases:'Pembelian Supplier',inventory:'Persediaan',expenses:'Biaya Operasional',ledger:'Jurnal & Buku Besar',master:'Data Master'};
-function showPage(p){document.querySelectorAll('.pageview').forEach(x=>x.classList.remove('show'));const target=document.getElementById('page-'+p);if(target)target.classList.add('show');document.querySelectorAll('#nav button').forEach(b=>b.classList.toggle('active',b.dataset.page===p));document.getElementById('crumb').textContent=names[p]||p;document.getElementById('topTitle').textContent=names[p]||p;window.scrollTo(0,0);if(innerWidth<=650)document.querySelector('.side').style.display='none';if(p==='master'&&supabaseClient)loadMasterData()}
+function showPage(p){document.querySelectorAll('.pageview').forEach(x=>x.classList.remove('show'));const target=document.getElementById('page-'+p);if(target)target.classList.add('show');document.querySelectorAll('#nav button').forEach(b=>b.classList.toggle('active',b.dataset.page===p));document.getElementById('crumb').textContent=names[p]||p;document.getElementById('topTitle').textContent=names[p]||p;window.scrollTo(0,0);if(innerWidth<=650)document.querySelector('.side').style.display='none';if(p==='master'&&supabaseClient)loadMasterData();if(p==='sales'&&supabaseClient)loadSalesOrders()}
 document.querySelectorAll('button[data-page]').forEach(b=>b.addEventListener('click',()=>showPage(b.dataset.page)));
 function toggleNav(){const s=document.querySelector('.side');s.style.display=s.style.display==='block'?'none':'block';s.style.position='absolute';s.style.zIndex='5';s.style.width='245px';s.style.minHeight='100vh';s.style.boxShadow='8px 0 30px #0002'}
 
+
+// Integrasi Sales Order: pesanan dan detail disimpan ke Supabase; stok tidak diubah pada tahap ini.
+let soCustomers=[];
+let soProducts=[];
+let soUnits=[];
+const rupiah=(amount)=>new Intl.NumberFormat('id-ID',{style:'currency',currency:'IDR',maximumFractionDigits:0}).format(Number(amount||0));
+function todayLocal(){const d=new Date();return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`;}
+function makeSoProductOptions(selected=''){
+  return '<option value="">Pilih produk aktif</option>'+soProducts.map(p=>`<option value="${escHtml(p.id)}" ${String(p.id)===String(selected)?'selected':''}>${escHtml(p.product_code)} — ${escHtml(p.name)} (${escHtml((soUnits.find(u=>String(u.id)===String(p.base_unit_id))||{}).name||'Satuan')})</option>`).join('');
+}
+function addSoItemRow(){
+  const row=document.createElement('div');row.className='card so-item-row';row.style.padding='14px';
+  row.innerHTML=`<div class="formgrid"><div class="field"><label>Produk *</label><select class="so-product" required>${makeSoProductOptions()}</select></div><div class="field"><label>Jumlah *</label><input class="so-quantity" type="number" min="0.001" step="0.001" required placeholder="Contoh: 10"></div><div class="field"><label>Harga jual per satuan (Rp) *</label><input class="so-price" type="number" min="0" step="1" required placeholder="Input harga manual"></div><div class="field"><label>Subtotal</label><input class="so-subtotal" readonly value="Rp 0" aria-label="Subtotal barang"></div></div><div style="display:flex;justify-content:space-between;align-items:center;gap:10px;margin-top:10px"><span class="sub so-unit-label">Pilih produk untuk melihat satuan.</span><button type="button" class="linkbtn so-remove">Hapus barang</button></div>`;
+  document.getElementById('soItemsContainer').appendChild(row);
+  row.querySelector('.so-product').addEventListener('change',()=>{const prod=soProducts.find(p=>String(p.id)===row.querySelector('.so-product').value);row.querySelector('.so-unit-label').textContent=prod?'Satuan: '+((soUnits.find(u=>String(u.id)===String(prod.base_unit_id))||{}).name||'Satuan'):'Pilih produk untuk melihat satuan.';updateSoTotals();});
+  row.querySelector('.so-quantity').addEventListener('input',updateSoTotals);
+  row.querySelector('.so-price').addEventListener('input',updateSoTotals);
+  row.querySelector('.so-remove').addEventListener('click',()=>{row.remove();if(!document.querySelector('.so-item-row'))addSoItemRow();updateSoTotals();});
+}
+function updateSoTotals(){let total=0;document.querySelectorAll('.so-item-row').forEach(row=>{const qty=Number(row.querySelector('.so-quantity').value||0),price=Number(row.querySelector('.so-price').value||0),sub=qty*price;total+=sub;row.querySelector('.so-subtotal').value=rupiah(sub);});document.getElementById('soTotal').textContent=rupiah(total);}
+async function loadSoChoices(){
+  const customerSelect=document.getElementById('soCustomer');
+  const [customersRes,productsRes,unitsRes]=await Promise.all([
+    supabaseClient.from('customers').select('id,customer_code,name,is_active').eq('is_active',true).order('name'),
+    supabaseClient.from('products').select('id,product_code,name,base_unit_id,is_active').eq('is_active',true).order('name'),
+    supabaseClient.from('units').select('id,code,name').order('name')
+  ]);
+  const err=[customersRes,productsRes,unitsRes].find(r=>r.error);
+  if(err)throw new Error(err.error.message);
+  soCustomers=customersRes.data||[];soProducts=productsRes.data||[];soUnits=unitsRes.data||[];
+  customerSelect.innerHTML='<option value="">Pilih pelanggan aktif</option>'+soCustomers.map(c=>`<option value="${escHtml(c.id)}">${escHtml(c.customer_code||'')} — ${escHtml(c.name)}</option>`).join('');
+}
+async function loadSalesOrders(){
+  const message=document.getElementById('salesOrderListMessage');
+  const body=document.getElementById('salesOrdersBody');
+  message.style.color='var(--muted)';message.textContent='Mengambil Sales Order dari Supabase...';
+  body.innerHTML='<tr><td colspan="6">Memuat data...</td></tr>';
+  try{
+    const [ordersRes,customersRes,productsRes,itemsRes]=await Promise.all([
+      supabaseClient.from('sales_orders').select('id,order_no,order_date,customer_id,status,notes,created_at').order('created_at',{ascending:false}),
+      supabaseClient.from('customers').select('id,name'),
+      supabaseClient.from('products').select('id,name,product_code'),
+      supabaseClient.from('sales_order_items').select('sales_order_id,product_id,quantity,unit_price,discount_amount')
+    ]);
+    const err=[ordersRes,customersRes,productsRes,itemsRes].find(r=>r.error);
+    if(err)throw new Error(err.error.message);
+    const orders=ordersRes.data||[],customers=customersRes.data||[],products=productsRes.data||[],items=itemsRes.data||[];
+    const customerMap=new Map(customers.map(x=>[String(x.id),x.name]));
+    const productMap=new Map(products.map(x=>[String(x.id),x]));
+    const totals=new Map();
+    for(const it of items){const old=totals.get(String(it.sales_order_id))||{total:0,count:0};old.total+=Number(it.quantity||0)*Number(it.unit_price||0)-Number(it.discount_amount||0);old.count+=1;totals.set(String(it.sales_order_id),old);}
+    if(!orders.length){body.innerHTML='<tr><td colspan="6" class="empty">Belum ada Sales Order tersimpan.</td></tr>';}
+    else body.innerHTML=orders.map(o=>{const summary=totals.get(String(o.id))||{total:0,count:0};const statusLabel=({draft:'Draft',confirmed:'Dikonfirmasi',cancelled:'Dibatalkan',completed:'Selesai'})[o.status]||o.status;return `<tr><td>${escHtml(o.order_no)}</td><td>${escHtml(o.order_date||'-')}</td><td>${escHtml(customerMap.get(String(o.customer_id))||'Pelanggan tidak ditemukan')}</td><td>${summary.count} jenis</td><td>${rupiah(summary.total)}</td><td><span class="status ${o.status==='confirmed'?'green':o.status==='cancelled'?'red':''}">${escHtml(statusLabel)}</span></td></tr>`;}).join('');
+    document.getElementById('salesOrderCount').textContent=`${orders.length} Sales Order tersimpan`;
+    message.textContent='Data ditampilkan langsung dari Supabase. Gudang/driver belum ditentukan pada tahap SO; stok tidak berubah.';message.style.color='var(--green)';
+  }catch(error){body.innerHTML='<tr><td colspan="6">Data belum dapat ditampilkan.</td></tr>';message.style.color='var(--red)';message.textContent='Gagal memuat Sales Order: '+error.message;document.getElementById('salesOrderCount').textContent='Gagal memuat';}
+}
+const salesOrderForm=document.getElementById('salesOrderForm');
+const salesOrderMessage=document.getElementById('salesOrderMessage');
+document.getElementById('showSalesFormBtn').addEventListener('click',async()=>{
+  if(!supabaseClient){salesOrderMessage.style.color='var(--red)';salesOrderMessage.textContent='Koneksi Supabase belum siap. Muat ulang halaman dan login kembali.';return;}
+  document.getElementById('salesForm').style.display='block';salesOrderMessage.textContent='Memuat pelanggan dan produk aktif...';salesOrderMessage.style.color='var(--muted)';
+  try{await loadSoChoices();document.getElementById('soDate').value=todayLocal();document.getElementById('soItemsContainer').innerHTML='';addSoItemRow();salesOrderMessage.textContent='';salesOrderForm.scrollIntoView({behavior:'smooth',block:'start'});}catch(error){salesOrderMessage.style.color='var(--red)';salesOrderMessage.textContent='Gagal memuat pilihan data: '+error.message;}
+});
+document.getElementById('closeSalesFormBtn').addEventListener('click',()=>{document.getElementById('salesForm').style.display='none';});
+document.getElementById('cancelSalesOrderBtn').addEventListener('click',()=>{salesOrderForm.reset();document.getElementById('soItemsContainer').innerHTML='';document.getElementById('salesForm').style.display='none';salesOrderMessage.textContent='';});
+document.getElementById('addSoItemBtn').addEventListener('click',addSoItemRow);
+document.getElementById('refreshSalesOrdersBtn').addEventListener('click',loadSalesOrders);
+salesOrderForm.addEventListener('submit',async(event)=>{
+  event.preventDefault();
+  if(!supabaseClient){salesOrderMessage.style.color='var(--red)';salesOrderMessage.textContent='Koneksi Supabase belum siap.';return;}
+  const customerId=document.getElementById('soCustomer').value;
+  const orderDate=document.getElementById('soDate').value;
+  const notes=document.getElementById('soNotes').value.trim()||null;
+  const rows=[...document.querySelectorAll('.so-item-row')];
+  if(!customerId){salesOrderMessage.style.color='var(--red)';salesOrderMessage.textContent='Pilih pelanggan terlebih dahulu.';return;}
+  if(!rows.length){salesOrderMessage.style.color='var(--red)';salesOrderMessage.textContent='Tambahkan minimal satu barang.';return;}
+  const orderItems=[];
+  for(const row of rows){
+    const productId=row.querySelector('.so-product').value,quantity=Number(row.querySelector('.so-quantity').value),unitPrice=Number(row.querySelector('.so-price').value);
+    const product=soProducts.find(p=>String(p.id)===String(productId));
+    if(!product||!Number.isFinite(quantity)||quantity<=0||!Number.isFinite(unitPrice)||unitPrice<0){salesOrderMessage.style.color='var(--red)';salesOrderMessage.textContent='Periksa produk, jumlah, dan harga pada setiap baris. Jumlah harus lebih dari 0 dan harga tidak boleh negatif.';return;}
+    orderItems.push({product_id:product.id,unit_id:product.base_unit_id,quantity,conversion_factor:1,unit_price:unitPrice,discount_amount:0,notes:null});
+  }
+  const saveBtn=document.getElementById('saveSalesOrderBtn');saveBtn.disabled=true;saveBtn.textContent='Menyimpan...';salesOrderMessage.style.color='var(--muted)';salesOrderMessage.textContent='Menyimpan Sales Order dan detail barang...';
+  try{
+    const {data:userData,error:userError}=await supabaseClient.auth.getUser();
+    if(userError)throw userError;
+    const now=new Date();const stamp=`${now.getFullYear()}${String(now.getMonth()+1).padStart(2,'0')}${String(now.getDate()).padStart(2,'0')}`;
+    const randomPart=Math.random().toString(36).slice(2,7).toUpperCase();const orderNo=`SO-${stamp}-${randomPart}`;
+    const {data:order,error:orderError}=await supabaseClient.from('sales_orders').insert({order_no:orderNo,order_date:orderDate,customer_id:Number(customerId),warehouse_id:null,status:'draft',notes,created_by:userData.user?.id||null}).select('id,order_no').single();
+    if(orderError)throw orderError;
+    const detailPayload=orderItems.map(item=>({...item,sales_order_id:order.id}));
+    const {error:itemsError}=await supabaseClient.from('sales_order_items').insert(detailPayload);
+    if(itemsError){await supabaseClient.from('sales_orders').delete().eq('id',order.id);throw new Error('Detail barang gagal disimpan. SO sementara dibatalkan. Detail: '+itemsError.message);}
+    salesOrderMessage.style.color='var(--green)';salesOrderMessage.textContent=`Sales Order ${order.order_no} berhasil disimpan. Stok belum berubah.`;
+    salesOrderForm.reset();document.getElementById('soItemsContainer').innerHTML='';document.getElementById('salesForm').style.display='none';
+    await loadSalesOrders();
+  }catch(error){salesOrderMessage.style.color='var(--red)';salesOrderMessage.textContent='Gagal menyimpan Sales Order: '+(error.message||String(error));}
+  finally{saveBtn.disabled=false;saveBtn.textContent='Simpan Sales Order';}
+});
 
 // Tahap pertama integrasi Data Master: membaca data nyata dari tabel Supabase.
 const escHtml=(value)=>String(value??'').replace(/[&<>"']/g,ch=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
