@@ -263,3 +263,9 @@
 <script src="js/invoices.js"></script>
 </body>
 </html>
+<!-- Pemantau Eror Otomatis untuk Tablet -->
+<script>
+  window.onerror = function(message, source, lineno) {
+    alert("Terdeteksi Eror Aplikasi:\n\n" + message + "\n\nFile: " + source + "\nBaris: " + lineno);
+  };
+</script>
