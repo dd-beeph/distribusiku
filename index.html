@@ -5,7 +5,7 @@
 <title>DistribusiKu — Dashboard</title>
 <style>
 :root{--navy:#13263f;--blue:#2864e8;--bg:#f4f7fb;--ink:#18283f;--muted:#718096;--line:#e7edf5;--green:#159a70;--orange:#d98220;--red:#d74d4d}
-*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:14px/1.45 Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}.app{min-height:100vh;display:grid;grid-template-columns:240px 1fr}.side{background:var(--navy);color:#dce6f5;padding:24px 15px;display:flex;flex-direction:column;gap:24px}.brand{display:flex;gap:11px;align-items:center;padding:0 8px}.logo{width:38px;height:38px;border-radius:12px;background:#3674f5;display:grid;place-items:center;color:white;font-weight:800;font-size:18px}.brand strong{display:block;color:#fff;font-size:16px}.brand small{color:#9fb1cb}.section{font-size:10px;text-transform:uppercase;letter-spacing:1.5px;color:#8da2bf;padding:0 12px;margin-bottom:5px}.nav{display:grid;gap:5px}.nav button{border:0;background:transparent;color:#bdcbe0;text-align:left;padding:11px 12px;border-radius:10px;font:inherit;cursor:pointer;display:flex;gap:11px;align-items:center}.nav button:hover,.nav button.active{background:#263e5d;color:#fff}.nav .ico{width:20px;text-align:center;font-size:16px}.sidebottom{margin-top:auto;border-top:1px solid #2b405a;padding:16px 8px 0;color:#9fb1cb;font-size:12px}.main{min-width:0}.top{height:76px;background:#fff;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;padding:0 32px;gap:16px}.crumb{color:var(--muted);font-size:12px}.top h2{font-size:18px;margin:2px 0 0}.topright{display:flex;align-items:center;gap:12px}.pill{background:#eaf8f2;color:#12815d;padding:7px 10px;border-radius:20px;font-size:12px;font-weight:700}.avatar{width:36px;height:36px;border-radius:50%;background:#e3ebff;color:#2458c7;display:grid;place-items:center;font-weight:800}.content{padding:28px 32px;max-width:1500px;margin:auto}.welcome{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-bottom:24px}.welcome h1{font-size:25px;letter-spacing:-.5px;margin:0 0 5px}.welcome p{color:var(--muted);margin:0}.date{color:#61718a;background:#fff;border:1px solid var(--line);border-radius:10px;padding:10px 13px;white-space:nowrap}.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;margin-bottom:20px}.card{background:white;border:1px solid var(--line);border-radius:15px;padding:20px;box-shadow:0 3px 12px #1c355008}.stathead{display:flex;justify-content:space-between;align-items:center;color:var(--muted);font-size:12px}.staticon{width:34px;height:34px;border-radius:10px;background:#edf3ff;color:var(--blue);display:grid;place-items:center;font-size:17px}.value{font-size:25px;font-weight:800;margin:15px 0 7px;letter-spacing:-.6px}.trend{font-size:11px;color:var(--green)}.trend span{color:var(--muted)}.grid2{display:grid;grid-template-columns:1.45fr 1fr;gap:18px}.cardtitle{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:17px}.cardtitle h3{font-size:15px;margin:0}.sub{color:var(--muted);font-size:12px;margin-top:3px}.linkbtn{border:0;background:#eef3ff;color:#2458c7;padding:8px 11px;border-radius:8px;font-weight:700;cursor:pointer}.chart{height:200px;display:flex;align-items:end;gap:13px;padding:15px 6px 0;border-bottom:1px solid var(--line);background:repeating-linear-gradient(to bottom,transparent 0,transparent 48px,#edf1f7 49px,#edf1f7 50px)}.barcol{height:100%;flex:1;display:flex;align-items:end;justify-content:center;position:relative}.bar{width:min(30px,70%);background:linear-gradient(180deg,#5b8cff,#2864e8);border-radius:6px 6px 0 0}.bar.alt{background:linear-gradient(180deg,#a4c0ff,#85a7f4)}.labels{display:flex;justify-content:space-around;color:#8a98ac;font-size:11px;margin-top:10px}.legend{display:flex;gap:15px;color:var(--muted);font-size:11px;margin-top:15px}.dot{display:inline-block;width:7px;height:7px;border-radius:50%;margin-right:5px;background:var(--blue)}.dot.alt{background:#a4c0ff}.list{display:grid;gap:0}.rowitem{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:13px 0;border-bottom:1px solid #eff2f7}.rowitem:last-child{border-bottom:0}.leftitem{display:flex;align-items:center;gap:11px;min-width:0}.mini{width:37px;height:37px;border-radius:10px;background:#f0f5ff;display:grid;place-items:center;font-size:16px}.itemname{font-weight:700;font-size:13px}.itemmeta{font-size:11px;color:var(--muted);margin-top:3px}.money{font-weight:750;white-space:nowrap;font-size:13px}.status{display:inline-block;border-radius:6px;padding:5px 8px;font-size:10px;font-weight:700;background:#fff3df;color:#a66312}.status.green{background:#e4f8ef;color:#11805a}.status.red{background:#ffe9e9;color:#bd3636}.tablewrap{overflow:auto}table{border-collapse:collapse;width:100%;min-width:560px}th{text-align:left;color:#7a889d;font-size:11px;font-weight:600;padding:11px 9px;border-bottom:1px solid var(--line)}td{padding:14px 9px;border-bottom:1px solid #eff2f7;font-size:12px}td:first-child{font-weight:700}.empty{color:var(--muted);padding:22px 0}.pageview{display:none}.pageview.show{display:block}.notice{border:1px solid #dce7ff;background:#f0f5ff;border-radius:12px;padding:15px 17px;color:#35527f;margin-bottom:18px}.formgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.field label{display:block;font-size:12px;color:#64748b;margin-bottom:6px}.field input,.field select,.field textarea{width:100%;padding:11px 12px;border:1px solid #dfe6f0;border-radius:9px;font:inherit;background:white}.primary{background:var(--blue);color:#fff;border:0;border-radius:9px;padding:11px 15px;font-weight:700;cursor:pointer}.footerhint{color:#8492a6;font-size:11px;margin-top:18px}.mobilemenu{display:none;background:white;border:1px solid var(--line);border-radius:8px;padding:8px 10px}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:14px/1.45 Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}.app{min-height:100vh;display:grid;grid-template-columns:240px 1fr}.side{background:var(--navy);color:#dce6f5;padding:24px 15px;display:flex;flex-direction:column;gap:24px}.brand{display:flex;gap:11px;align-items:center;padding:0 8px}.logo{width:38px;height:38px;border-radius:12px;background:#3674f5;display:grid;place-items:center;color:white;font-weight:800;font-size:18px}.brand strong{display:block;color:#fff;font-size:16px}.brand small{color:#9fb1cb}.section{font-size:10px;text-transform:uppercase;letter-spacing:1.5px;color:#8da2bf;padding:0 12px;margin-bottom:5px}.nav{display:grid;gap:5px}.nav button{border:0;background:transparent;color:#bdcbe0;text-align:left;padding:11px 12px;border-radius:10px;font:inherit;cursor:pointer;display:flex;gap:11px;align-items:center}.nav button:hover,.nav button.active{background:#263e5d;color:#fff}.nav .ico{width:20px;text-align:center;font-size:16px}.sidebottom{margin-top:auto;border-top:1px solid #2b405a;padding:16px 8px 0;color:#9fb1cb;font-size:12px}.main{min-width:0}.top{height:76px;background:#fff;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;padding:0 32px;gap:16px}.crumb{color:var(--muted);font-size:12px}.top h2{font-size:18px;margin:2px 0 0}.topright{display:flex;align-items:center;gap:12px}.pill{background:#eaf8f2;color:#12815d;padding:7px 10px;border-radius:20px;font-size:12px;font-weight:700}.avatar{width:36px;height:36px;border-radius:50%;background:#e3ebff;color:#2458c7;display:grid;place-items:center;font-weight:800}.content{padding:28px 32px;max-width:1500px;margin:auto}.welcome{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-bottom:24px}.welcome h1{font-size:25px;letter-spacing:-.5px;margin:0 0 5px}.welcome p{color:var(--muted);margin:0}.date{color:#61718a;background:#fff;border:1px solid var(--line);border-radius:10px;padding:10px 13px;white-space:nowrap}.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;margin-bottom:20px}.card{background:white;border:1px solid var(--line);border-radius:15px;padding:20px;box-shadow:0 3px 12px #1c355008}.stathead{display:flex;justify-content:space-between;align-items:center;color:var(--muted);font-size:12px}.staticon{width:34px;height:34px;border-radius:10px;background:#edf3ff;color:var(--blue);display:grid;place-items:center;font-size:17px}.value{font-size:25px;font-weight:800;margin:15px 0 7px;letter-spacing:-.6px}.trend{font-size:11px;color:var(--green)}.trend span{color:var(--muted)}.grid2{display:grid;grid-template-columns:1.45fr 1fr;gap:18px}.cardtitle{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:17px}.cardtitle h3{font-size:15px;margin:0}.sub{color:var(--muted);font-size:12px;margin-top:3px}.linkbtn{border:0;background:#eef3ff;color:#2458c7;padding:8px 11px;border-radius:8px;font-weight:700;cursor:pointer}.chart{height:200px;display:flex;align-items:end;gap:13px;padding:15px 6px 0;border-bottom:1px solid var(--line);background:repeating-linear-gradient(to bottom,transparent 0,transparent 48px,#edf1f7 49px,#edf1f7 50px)}.barcol{height:100%;flex:1;display:flex;align-items:end;justify-content:center;position:relative}.bar{width:min(30px,70%);background:linear-gradient(180deg,#5b8cff,#2864e8);border-radius:6px 6px 0 0}.bar.alt{background:linear-gradient(180deg,#a4c0ff,#85a7f4)}.labels{display:flex;justify-space-around;color:#8a98ac;font-size:11px;margin-top:10px}.legend{display:flex;gap:15px;color:var(--muted);font-size:11px;margin-top:15px}.dot{display:inline-block;width:7px;height:7px;border-radius:50%;margin-right:5px;background:var(--blue)}.dot.alt{background:#a4c0ff}.list{display:grid;gap:0}.rowitem{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:13px 0;border-bottom:1px solid #eff2f7}.rowitem:last-child{border-bottom:0}.leftitem{display:flex;align-items:center;gap:11px;min-width:0}.mini{width:37px;height:37px;border-radius:10px;background:#f0f5ff;display:grid;place-items:center;font-size:16px}.itemname{font-weight:700;font-size:13px}.itemmeta{font-size:11px;color:var(--muted);margin-top:3px}.money{font-weight:750;white-space:nowrap;font-size:13px}.status{display:inline-block;border-radius:6px;padding:5px 8px;font-size:10px;font-weight:700;background:#fff3df;color:#a66312}.status.green{background:#e4f8ef;color:#11805a}.status.red{background:#ffe9e9;color:#bd3636}.tablewrap{overflow:auto}table{border-collapse:collapse;width:100%;min-width:560px}th{text-align:left;color:#7a889d;font-size:11px;font-weight:600;padding:11px 9px;border-bottom:1px solid var(--line)}td{padding:14px 9px;border-bottom:1px solid #eff2f7;font-size:12px}td:first-child{font-weight:700}.empty{color:var(--muted);padding:22px 0}.pageview{display:none}.pageview.show{display:block}.notice{border:1px solid #dce7ff;background:#f0f5ff;border-radius:12px;padding:15px 17px;color:#35527f;margin-bottom:18px}.formgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.field label{display:block;font-size:12px;color:#64748b;margin-bottom:6px}.field input,.field select,.field textarea{width:100%;padding:11px 12px;border:1px solid #dfe6f0;border-radius:9px;font:inherit;background:white}.primary{background:var(--blue);color:#fff;border:0;border-radius:9px;padding:11px 15px;font-weight:700;cursor:pointer}.footerhint{color:#8492a6;font-size:11px;margin-top:18px}.mobilemenu{display:none;background:white;border:1px solid var(--line);border-radius:8px;padding:8px 10px}
 .so-search{margin-bottom:0}.so-customer-field{position:relative}.so-customer-suggestions{position:absolute;z-index:30;top:100%;left:0;right:0;max-height:260px;overflow:auto;background:#fff;border:1px solid #dfe6f0;border-radius:9px;box-shadow:0 8px 24px #13263f1a}.so-customer-option{display:block;width:100%;border:0;border-bottom:1px solid #eff2f7;background:#fff;padding:10px 12px;text-align:left;font:inherit;cursor:pointer}.so-customer-option:hover,.so-customer-option:focus{background:#eef3ff;outline:none}.so-customer-option small{display:block;color:var(--muted);font-size:11px}.so-items-scroll{overflow-x:auto;padding-bottom:4px}.so-item-row{min-width:1080px;display:grid;grid-template-columns:120px minmax(220px,2fr) 110px 100px minmax(150px,1.2fr) minmax(145px,1.1fr) auto;gap:10px;align-items:end}.so-item-row .field label{white-space:nowrap}.so-item-row .field input,.so-item-row .field select{padding:9px 10px}.so-items-header{min-width:1080px;display:grid;grid-template-columns:120px minmax(220px,2fr) 110px 100px minmax(150px,1.2fr) minmax(145px,1.1fr) auto;gap:10px;padding:0 10px 6px;font-size:12px;color:var(--muted);font-weight:700}.so-items-header span{white-space:nowrap}.so-product-field{position:relative}.so-product-suggestions{position:absolute;z-index:35;top:100%;left:0;right:0;max-height:260px;overflow:auto;background:#fff;border:1px solid #dfe6f0;border-radius:9px;box-shadow:0 8px 24px #13263f1a}.so-product-option{display:block;width:100%;border:0;border-bottom:1px solid #eff2f7;background:#fff;padding:10px 12px;text-align:left;font:inherit;cursor:pointer}.so-product-option:hover,.so-product-option:focus{background:#eef3ff;outline:none}.so-remove{white-space:nowrap;margin-bottom:1px}
 .so-actions{display:flex;align-items:center;gap:5px;white-space:nowrap}
 .so-action-btn{width:32px;height:32px;display:inline-grid;place-items:center;border:1px solid var(--line);border-radius:8px;background:#fff;color:#38506e;font-size:17px;cursor:pointer;padding:0}
@@ -25,13 +25,13 @@
 .auth-card button{width:100%;margin-top:16px;padding:12px;border:0;border-radius:9px;background:var(--blue);color:white;font:inherit;font-weight:700;cursor:pointer}
 #authMessage{margin-top:12px;font-size:13px;color:var(--red);overflow-wrap:anywhere}.auth-note{font-size:12px;color:var(--muted);margin-top:14px}
 #logoutBtn{border:1px solid var(--line);background:#fff;border-radius:8px;padding:7px 10px;color:var(--ink);cursor:pointer}
-
 </style></head>
 <body><div class="app">
 <aside class="side"><div class="brand"><div class="logo">D</div><div><strong>DistribusiKu</strong><small>Business Management</small></div></div>
 <div><div class="section">Menu utama</div><nav class="nav" id="nav">
 <button class="active" data-page="dashboard"><span class="ico">▦</span>Dashboard</button>
 <button data-page="sales"><span class="ico">▤</span>Sales Order</button>
+<button data-page="deliveries"><span class="ico">🚚</span>Pengiriman Barang</button>
 <button data-page="invoices"><span class="ico">▧</span>Faktur Penjualan</button>
 <button data-page="payments"><span class="ico">↙</span>Pembayaran</button>
 <button data-page="purchases"><span class="ico">＋</span>Pembelian Supplier</button>
@@ -42,12 +42,99 @@
 <div class="sidebottom">Versi prototype · Data contoh<br>3 gudang · Distribusi minuman</div></aside>
 <main class="main"><header class="top"><div style="display:flex;align-items:center;gap:12px"><button class="mobilemenu" onclick="toggleNav()">☰</button><div><div class="crumb">DistribusiKu / <span id="crumb">Dashboard</span></div><h2 id="topTitle">Dashboard</h2></div></div><div class="topright"><span class="pill">● Prototype</span><div class="avatar">OW</div><div><strong style="font-size:12px;display:block">Owner</strong><span style="font-size:11px;color:#8492a6">Administrator</span></div></div></header>
 <div class="content">
-<section class="pageview show" id="page-dashboard"><div class="welcome"><div><h1>Selamat datang 👋</h1><p>Ringkasan aktivitas bisnis distribusi Anda hari ini.</p></div><div class="date">◷ &nbsp; Senin, 19 Oktober 2026</div></div>
+<section class="pageview show" id="page-dashboard"><div class="welcome"><div><h1>Selamat datang 👋</h1><p>Ringkasan aktivitas bisnis distribusi Anda hari ini.</p></div><div class="date">◷ &nbsp; Rabu, 21 Oktober 2026</div></div>
 <div class="stats"><div class="card"><div class="stathead">Penjualan hari ini <span class="staticon">↗</span></div><div class="value">Rp 24,8 jt</div><div class="trend">↑ 12,8% <span>vs. hari sebelumnya</span></div></div><div class="card"><div class="stathead">Piutang pelanggan <span class="staticon">▤</span></div><div class="value">Rp 86,2 jt</div><div class="trend"><span>12 faktur belum lunas</span></div></div><div class="card"><div class="stathead">Pesanan aktif <span class="staticon">▣</span></div><div class="value">18</div><div class="trend"><span>6 menunggu pengiriman</span></div></div><div class="card"><div class="stathead">Nilai persediaan <span class="staticon">▦</span></div><div class="value">Rp 412 jt</div><div class="trend"><span>Di 3 gudang</span></div></div></div>
 <div class="grid2"><div class="card"><div class="cardtitle"><div><h3>Ringkasan penjualan</h3><div class="sub">Performa penjualan minggu ini</div></div><button class="linkbtn" onclick="showPage('sales')">Lihat pesanan ↗</button></div><div class="chart"><div class="barcol"><div class="bar" style="height:45%"></div></div><div class="barcol"><div class="bar alt" style="height:60%"></div></div><div class="barcol"><div class="bar" style="height:53%"></div></div><div class="barcol"><div class="bar alt" style="height:76%"></div></div><div class="barcol"><div class="bar" style="height:68%"></div></div><div class="barcol"><div class="bar alt" style="height:88%"></div></div><div class="barcol"><div class="bar" style="height:72%"></div></div></div><div class="labels"><span>Sen</span><span>Sel</span><span>Rab</span><span>Kam</span><span>Jum</span><span>Sab</span><span>Min</span></div><div class="legend"><span><i class="dot"></i>Penjualan</span><span><i class="dot alt"></i>Minggu sebelumnya</span></div></div>
 <div class="card"><div class="cardtitle"><div><h3>Perlu perhatian</h3><div class="sub">Hal yang perlu ditindaklanjuti</div></div><span class="status">4 item</span></div><div class="list"><div class="rowitem"><div class="leftitem"><div class="mini">🚚</div><div><div class="itemname">Pengiriman menunggu</div><div class="itemmeta">6 pesanan perlu diproses</div></div></div><span class="status">6</span></div><div class="rowitem"><div class="leftitem"><div class="mini">💳</div><div><div class="itemname">Faktur jatuh tempo</div><div class="itemmeta">Perlu tindak lanjut pembayaran</div></div></div><span class="status red">3</span></div><div class="rowitem"><div class="leftitem"><div class="mini">📦</div><div><div class="itemname">Stok menipis</div><div class="itemmeta">Produk di bawah batas minimum</div></div></div><span class="status red">5</span></div><div class="rowitem"><div class="leftitem"><div class="mini">🧾</div><div><div class="itemname">Biaya menunggu approval</div><div class="itemmeta">Pengajuan tim gudang</div></div></div><span class="status">2</span></div></div></div></div>
-<div class="card" style="margin-top:18px"><div class="cardtitle"><div><h3>Transaksi terbaru</h3><div class="sub">Contoh tampilan daftar transaksi</div></div><button class="linkbtn" onclick="showPage('invoices')">Semua transaksi ↗</button></div><div class="tablewrap"><table><thead><tr><th>No. Transaksi</th><th>Pelanggan</th><th>Tanggal</th><th>Nilai</th><th>Status</th></tr></thead><tbody><tr><td>SO-2026-0108</td><td>Toko Sumber Rejeki</td><td>19 Okt 2026</td><td>Rp 4.250.000</td><td><span class="status green">Dikirim</span></td></tr><tr><td>SO-2026-0107</td><td>CV Berkah Jaya</td><td>19 Okt 2026</td><td>Rp 2.875.000</td><td><span class="status">Menunggu</span></td></tr><tr><td>INV-2026-0098</td><td>UD Makmur Sentosa</td><td>18 Okt 2026</td><td>Rp 6.120.000</td><td><span class="status red">Belum lunas</span></td></tr></tbody></table></div></div><div class="footerhint">Tampilan demo dengan data contoh — belum terhubung ke database Supabase.</div></section>
+<div class="footerhint">Tampilan demo dengan data contoh — belum terhubung ke database Supabase.</div></section>
+
+<!-- Modul Sales Order -->
 <section class="pageview" id="page-sales"><div class="welcome"><div><h1>Sales Order</h1><p>Catat pesanan pelanggan sebelum barang dikirim.</p></div><button class="primary" id="showSalesFormBtn">＋ Buat Sales Order</button></div><div class="notice">Sales memilih pelanggan, produk, jumlah, dan harga jual manual. Gudang asal serta driver ditentukan saat pengiriman/faktur. Stok tidak berkurang saat SO dibuat.</div><div class="card" id="soStockAllocationCard" style="margin-bottom:18px;border:2px solid var(--line);display:block;visibility:visible;opacity:1"><div class="cardtitle"><div><h3>Alokasi Stok Pesanan</h3><div class="sub">Kebutuhan produk dari Sales Order aktif, sebelum barang dikirim</div></div><button class="linkbtn" id="refreshSoStockBtn" type="button">Muat Ulang</button></div><div id="soStockMessage" class="sub" style="margin-bottom:10px">Memuat kebutuhan stok...</div><div class="tablewrap"><table><thead><tr><th>Kode Produk</th><th>Nama Produk</th><th>Stok Dibutuhkan</th><th>Stok Tersedia</th></tr></thead><tbody id="soStockBody"><tr><td colspan="4">Memuat data...</td></tr></tbody></table></div></div><div class="card" id="salesForm" style="display:none;margin-bottom:18px"><div class="cardtitle"><h3>Buat Sales Order</h3><button class="linkbtn" id="closeSalesFormBtn" type="button">Tutup</button></div><form id="salesOrderForm"><div class="formgrid"><div class="field so-customer-field"><label for="soCustomerSearch">Pelanggan *</label><input id="soCustomerSearch" class="so-search" type="text" autocomplete="off" placeholder="Ketik nama atau kode pelanggan..."><div id="soCustomerSuggestions" class="so-customer-suggestions" style="display:none" role="listbox"></div><select id="soCustomer" style="display:none" aria-hidden="true"><option value="">Pilih pelanggan</option></select><div class="sub">Ketik satu huruf untuk melihat pelanggan yang cocok, lalu pilih hasilnya.</div></div><div class="field"><label for="soDate">Tanggal pesanan *</label><input id="soDate" type="date" required></div><div class="field" style="grid-column:1/-1"><label for="soNotes">Catatan pesanan</label><textarea id="soNotes" rows="2" placeholder="Opsional"></textarea></div></div><div class="cardtitle" style="margin-top:20px"><div><h3>Barang pesanan</h3><div class="sub">Harga jual diinput manual. Satuan mengikuti satuan dasar produk.</div></div><button class="linkbtn" id="addSoItemBtn" type="button">＋ Tambah Barang</button></div><div class="so-items-scroll"><div class="so-items-header"><span>Kode Produk</span><span>Nama Produk</span><span>Satuan</span><span>Jumlah</span><span>Harga Satuan</span><span>Subtotal</span><span></span></div><div id="soItemsContainer" style="display:grid;gap:8px"></div></div><div style="display:flex;justify-content:flex-end;gap:10px;align-items:center;margin-top:18px;flex-wrap:wrap"><strong>Total pesanan: <span id="soTotal">Rp 0</span></strong></div><p id="salesOrderMessage" role="status" style="overflow-wrap:anywhere"></p><div style="display:flex;gap:10px;flex-wrap:wrap"><button class="primary" id="saveSalesOrderBtn" type="submit">Simpan Sales Order</button><button class="linkbtn" id="cancelSalesOrderBtn" type="button">Batal</button></div></form></div><div class="card"><div class="cardtitle"><div><h3>Daftar pesanan</h3><div class="sub" id="salesOrderCount">Memuat data dari Supabase...</div></div><button class="linkbtn" id="refreshSalesOrdersBtn" type="button">Muat Ulang</button></div><div id="salesOrderListMessage" role="status" style="margin-bottom:10px;overflow-wrap:anywhere"></div><div class="tablewrap"><table><thead><tr><th>No. SO</th><th>Tanggal</th><th>Pelanggan</th><th>Jumlah Jenis</th><th>Total</th><th>Status</th><th>Aksi</th></tr></thead><tbody id="salesOrdersBody"><tr><td colspan="7">Memuat data...</td></tr></tbody></table></div></div></section>
+
+<!-- Modul Pengiriman Barang (Deliveries) -->
+<section class="pageview" id="page-deliveries">
+  <div class="welcome"><div><h1>Pengiriman Barang (Surat Jalan)</h1><p>Catat pengiriman fisik barang berdasarkan Sales Order.</p></div><button class="primary" id="showDeliveryFormBtn">＋ Catat Pengiriman Baru</button></div>
+  <div class="notice">Kasir mencatat jumlah barang yang benar-benar dikirim dari gudang. Pengiriman dapat dilakukan bertahap sesuai stok dan kapasitas armada.</div>
+  <div class="card" id="deliveryForm" style="display:none;margin-bottom:18px">
+    <div class="cardtitle"><h3 id="deliveryFormTitle">Catat Pengiriman Baru</h3><button class="linkbtn" id="closeDeliveryFormBtn" type="button">Tutup</button></div>
+    <form id="deliveryRecordForm">
+      <div class="formgrid">
+        <div class="field">
+          <label for="deliverySoSelect">Pilih Sales Order *</label>
+          <select id="deliverySoSelect" required><option value="">Memuat Sales Order...</option></select>
+        </div>
+        <div class="field">
+          <label for="deliveryWarehouse">Gudang Asal *</label>
+          <select id="deliveryWarehouse" required><option value="">Memuat Gudang...</option></select>
+        </div>
+        <div class="field">
+          <label for="deliveryDate">Tanggal Kirim *</label>
+          <input id="deliveryDate" type="date" required>
+        </div>
+        <div class="field">
+          <label for="deliveryDriver">Nama Pengemudi / Kurir *</label>
+          <input id="deliveryDriver" type="text" required placeholder="Contoh: Pak Budi / Driver 01">
+        </div>
+        <div class="field" style="grid-column:1/-1">
+          <label for="deliveryNotes">Catatan Pengiriman</label>
+          <textarea id="deliveryNotes" rows="2" placeholder="Opsional (contoh: Titip di toko / Dikirim sebagian)"></textarea>
+        </div>
+      </div>
+      <div class="cardtitle" style="margin-top:20px">
+        <div><h3>Rincian Barang Dikirim</h3><div class="sub">Masukkan jumlah barang yang benar-benar dikirim pada pengiriman ini.</div></div>
+      </div>
+      <div class="tablewrap" style="margin-bottom:16px">
+        <table>
+          <thead>
+            <tr>
+              <th>Kode & Nama Produk</th>
+              <th>Satuan</th>
+              <th style="text-align:right">Total Pesanan SO</th>
+              <th style="text-align:right">Sudah Dikirim</th>
+              <th style="text-align:right">Sisa SO</th>
+              <th style="width:160px;text-align:right">Kirim Hari Ini *</th>
+            </tr>
+          </thead>
+          <tbody id="deliveryItemsBody">
+            <tr><td colspan="6" class="empty">Pilih Sales Order terlebih dahulu untuk menampilkan rincian barang.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p id="deliveryFormMessage" role="status" style="overflow-wrap:anywhere"></p>
+      <div style="display:flex;gap:10px;flex-wrap:wrap">
+        <button class="primary" id="saveDeliveryBtn" type="submit">Simpan Surat Jalan</button>
+        <button class="linkbtn" id="cancelDeliveryBtn" type="button">Batal</button>
+      </div>
+    </form>
+  </div>
+  <div class="card">
+    <div class="cardtitle">
+      <div><h3>Daftar Surat Jalan / Pengiriman</h3><div class="sub" id="deliveryCount">Memuat data dari Supabase...</div></div>
+      <button class="linkbtn" id="refreshDeliveriesBtn" type="button">Muat Ulang</button>
+    </div>
+    <div id="deliveryListMessage" role="status" style="margin-bottom:10px;overflow-wrap:anywhere"></div>
+    <div class="tablewrap">
+      <table>
+        <thead>
+          <tr>
+            <th>No. Surat Jalan</th>
+            <th>No. SO</th>
+            <th>Tanggal Kirim</th>
+            <th>Pelanggan</th>
+            <th>Gudang Asal</th>
+            <th>Pengemudi</th>
+            <th>Status</th>
+            <th>Aksi</th>
+          </tr>
+        </thead>
+        <tbody id="deliveriesBody">
+          <tr><td colspan="8">Memuat data...</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
 <section class="pageview" id="page-invoices"><div class="welcome"><div><h1>Faktur Penjualan</h1><p>Tagihkan barang sesuai hasil pengiriman.</p></div><button class="primary" onclick="alert('Form faktur akan diaktifkan saat integrasi database.')">＋ Buat Faktur</button></div><div class="notice">Kasir mencatat jumlah barang yang benar-benar diterima pelanggan. Harga hanya dapat diubah oleh Owner sesuai aturan bisnis.</div><div class="card"><h3>Daftar faktur</h3><p class="empty">Belum ada data nyata. Daftar ini akan terisi setelah Supabase dihubungkan.</p></div></section>
 <section class="pageview" id="page-payments"><div class="welcome"><div><h1>Pembayaran</h1><p>Catat pembayaran tunai, transfer, atau claim voucher.</p></div><button class="primary" onclick="alert('Form pembayaran akan diaktifkan saat integrasi database.')">＋ Catat Pembayaran</button></div><div class="card"><h3>Riwayat pembayaran</h3><p class="empty">Belum terhubung ke database.</p></div></section>
 <section class="pageview" id="page-purchases"><div class="welcome"><div><h1>Pembelian Supplier</h1><p>Kelola purchase order dan penerimaan barang.</p></div><button class="primary" onclick="alert('Form pembelian akan diaktifkan saat integrasi database.')">＋ Pembelian Baru</button></div><div class="card"><h3>Daftar pembelian</h3><p class="empty">Belum terhubung ke database.</p></div></section>
@@ -73,18 +160,20 @@
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script src="./supabase-config.js"></script>
 <script>
-const names={dashboard:'Dashboard',sales:'Sales Order',invoices:'Faktur Penjualan',payments:'Pembayaran',purchases:'Pembelian Supplier',inventory:'Persediaan',expenses:'Biaya Operasional',ledger:'Jurnal & Buku Besar',master:'Data Master'};
-function showPage(p){document.querySelectorAll('.pageview').forEach(x=>x.classList.remove('show'));const target=document.getElementById('page-'+p);if(target)target.classList.add('show');document.querySelectorAll('#nav button').forEach(b=>b.classList.toggle('active',b.dataset.page===p));document.getElementById('crumb').textContent=names[p]||p;document.getElementById('topTitle').textContent=names[p]||p;window.scrollTo(0,0);if(innerWidth<=650)document.querySelector('.side').style.display='none';if(p==='master'&&supabaseClient)loadMasterData();if(p==='sales'&&supabaseClient){loadSalesOrders();loadSoStockSummary()}}
+const names={dashboard:'Dashboard',sales:'Sales Order',deliveries:'Pengiriman Barang',invoices:'Faktur Penjualan',payments:'Pembayaran',purchases:'Pembelian Supplier',inventory:'Persediaan',expenses:'Biaya Operasional',ledger:'Jurnal & Buku Besar',master:'Data Master'};
+function showPage(p){document.querySelectorAll('.pageview').forEach(x=>x.classList.remove('show'));const target=document.getElementById('page-'+p);if(target)target.classList.add('show');document.querySelectorAll('#nav button').forEach(b=>b.classList.toggle('active',b.dataset.page===p));document.getElementById('crumb').textContent=names[p]||p;document.getElementById('topTitle').textContent=names[p]||p;window.scrollTo(0,0);if(innerWidth<=650)document.querySelector('.side').style.display='none';if(p==='master'&&supabaseClient)loadMasterData();if(p==='sales'&&supabaseClient){loadSalesOrders();loadSoStockSummary()}if(p==='deliveries'&&supabaseClient){loadDeliveries()}}
 document.querySelectorAll('button[data-page]').forEach(b=>b.addEventListener('click',()=>showPage(b.dataset.page)));
 function toggleNav(){const s=document.querySelector('.side');s.style.display=s.style.display==='block'?'none':'block';s.style.position='absolute';s.style.zIndex='5';s.style.width='245px';s.style.minHeight='100vh';s.style.boxShadow='8px 0 30px #0002'}
 
+// Helper global
+const escHtml=(value)=>String(value??'').replace(/[&<>"']/g,ch=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
+const rupiah=(amount)=>new Intl.NumberFormat('id-ID',{style:'currency',currency:'IDR',maximumFractionDigits:0}).format(Number(amount||0));
+function todayLocal(){const d=new Date();return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`;}
 
-// Integrasi Sales Order: pesanan dan detail disimpan ke Supabase; stok tidak diubah pada tahap ini.
+// --- MODUL SALES ORDER ---
 let soCustomers=[];
 let soProducts=[];
 let soUnits=[];
-const rupiah=(amount)=>new Intl.NumberFormat('id-ID',{style:'currency',currency:'IDR',maximumFractionDigits:0}).format(Number(amount||0));
-function todayLocal(){const d=new Date();return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`;}
 function makeSoProductOptions(){
   return '<option value="">Pilih produk</option>'+soProducts.map(p=>`<option value="${escHtml(p.id)}">${escHtml(p.name)}</option>`).join('');
 }
@@ -133,7 +222,6 @@ document.getElementById('soCustomerSearch').addEventListener('input',e=>{documen
 document.getElementById('soCustomerSearch').addEventListener('focus',e=>{if(e.target.value.trim())renderSoCustomerOptions(e.target.value);});
 document.addEventListener('click',e=>{const field=document.querySelector('.so-customer-field');if(field&&!field.contains(e.target)){document.getElementById('soCustomerSuggestions').style.display='none';}});
 async function loadSoChoices(){
-  const customerSelect=document.getElementById('soCustomer');
   const [customersRes,productsRes,unitsRes]=await Promise.all([
     supabaseClient.from('customers').select('id,customer_code,name,is_active').eq('is_active',true).order('name'),
     supabaseClient.from('products').select('id,product_code,name,base_unit_id,is_active').eq('is_active',true).order('name'),
@@ -163,21 +251,20 @@ async function loadSalesOrders(){
     if(err)throw new Error(err.error.message);
     const orders=ordersRes.data||[],customers=customersRes.data||[],products=productsRes.data||[],items=itemsRes.data||[];
     const customerMap=new Map(customers.map(x=>[String(x.id),x.name]));
-    const productMap=new Map(products.map(x=>[String(x.id),x]));
     const totals=new Map();
     for(const it of items){const old=totals.get(String(it.sales_order_id))||{total:0,count:0};old.total+=Number(it.quantity||0)*Number(it.unit_price||0)-Number(it.discount_amount||0);old.count+=1;totals.set(String(it.sales_order_id),old);}
     if(!orders.length){body.innerHTML='<tr><td colspan="7" class="empty">Belum ada Sales Order tersimpan.</td></tr>';}
     else body.innerHTML=orders.map(o=>{const summary=totals.get(String(o.id))||{total:0,count:0};const statusLabel=({confirmed:'Dikonfirmasi',cancelled:'Dibatalkan',completed:'Selesai'})[o.status]||(o.status==='draft'?'Perlu pembaruan status':o.status);const canEdit=o.status==='confirmed';return `<tr><td>${escHtml(o.order_no)}</td><td>${escHtml(o.order_date||'-')}</td><td>${escHtml(customerMap.get(String(o.customer_id))||'Pelanggan tidak ditemukan')}</td><td>${summary.count} jenis</td><td>${rupiah(summary.total)}</td><td><span class="status ${o.status==='confirmed'?'green':o.status==='cancelled'?'red':''}">${escHtml(statusLabel)}</span></td><td><div class="so-actions"><button type="button" class="so-action-btn" data-so-action="view" data-so-id="${escHtml(o.id)}" title="Lihat" aria-label="Lihat ${escHtml(o.order_no)}">⌕</button><button type="button" class="so-action-btn" data-so-action="edit" data-so-id="${escHtml(o.id)}" title="Edit" aria-label="Edit ${escHtml(o.order_no)}" ${canEdit?'':'disabled'}>✎</button><button type="button" class="so-action-btn danger" data-so-action="cancel" data-so-id="${escHtml(o.id)}" title="Batalkan" aria-label="Batalkan ${escHtml(o.order_no)}" ${canEdit?'':'disabled'}>⊗</button><button type="button" class="so-action-btn" data-so-action="print" data-so-id="${escHtml(o.id)}" title="Cetak" aria-label="Cetak ${escHtml(o.order_no)}">⎙</button></div></td></tr>`;}).join('');
     document.getElementById('salesOrderCount').textContent=`${orders.length} Sales Order tersimpan`;
-    message.textContent='Data ditampilkan langsung dari Supabase. Gudang/driver belum ditentukan pada tahap SO; stok tidak berubah.';message.style.color='var(--green)';
+    message.textContent='Data ditampilkan langsung dari Supabase.';message.style.color='var(--green)';
   }catch(error){body.innerHTML='<tr><td colspan="7">Data belum dapat ditampilkan.</td></tr>';message.style.color='var(--red)';message.textContent='Gagal memuat Sales Order: '+error.message;document.getElementById('salesOrderCount').textContent='Gagal memuat';}
 }
 const salesOrderForm=document.getElementById('salesOrderForm');
 const salesOrderMessage=document.getElementById('salesOrderMessage');
 document.getElementById('showSalesFormBtn').addEventListener('click',async()=>{
   editingSalesOrderId=null;editingSalesOrderNo=null;document.getElementById('salesForm').querySelector('h3').textContent='Buat Sales Order';document.getElementById('saveSalesOrderBtn').textContent='Simpan Sales Order';
-  if(!supabaseClient){salesOrderMessage.style.color='var(--red)';salesOrderMessage.textContent='Koneksi Supabase belum siap. Muat ulang halaman dan login kembali.';return;}
-  document.getElementById('salesForm').style.display='block';salesOrderMessage.textContent='Memuat pelanggan dan produk aktif...';salesOrderMessage.style.color='var(--muted)';
+  if(!supabaseClient){salesOrderMessage.style.color='var(--red)';salesOrderMessage.textContent='Koneksi Supabase belum siap.';return;}
+  document.getElementById('salesForm').style.display='block';salesOrderMessage.textContent='Memuat data...';salesOrderMessage.style.color='var(--muted)';
   try{await loadSoChoices();document.getElementById('soDate').value=todayLocal();document.getElementById('soItemsContainer').innerHTML='';addSoItemRow();salesOrderMessage.textContent='';salesOrderForm.scrollIntoView({behavior:'smooth',block:'start'});}catch(error){salesOrderMessage.style.color='var(--red)';salesOrderMessage.textContent='Gagal memuat pilihan data: '+error.message;}
 });
 document.getElementById('closeSalesFormBtn').addEventListener('click',()=>{document.getElementById('salesForm').style.display='none';});
@@ -197,17 +284,15 @@ salesOrderForm.addEventListener('submit',async(event)=>{
   for(const row of rows){
     const productId=row.querySelector('.so-product').value,quantity=Number(row.querySelector('.so-quantity').value),unitPrice=Number(row.querySelector('.so-price').value);
     const product=soProducts.find(p=>String(p.id)===String(productId));
-    if(!product||!Number.isFinite(quantity)||quantity<=0||!Number.isFinite(unitPrice)||unitPrice<0){salesOrderMessage.style.color='var(--red)';salesOrderMessage.textContent='Periksa produk, jumlah, dan harga pada setiap baris. Jumlah harus lebih dari 0 dan harga tidak boleh negatif.';return;}
+    if(!product||!Number.isFinite(quantity)||quantity<=0||!Number.isFinite(unitPrice)||unitPrice<0){salesOrderMessage.style.color='var(--red)';salesOrderMessage.textContent='Periksa produk, jumlah, dan harga pada setiap baris.';return;}
     orderItems.push({product_id:product.id,unit_id:product.base_unit_id,quantity,conversion_factor:1,unit_price:unitPrice,discount_amount:0,notes:null});
   }
-  const saveBtn=document.getElementById('saveSalesOrderBtn');saveBtn.disabled=true;saveBtn.textContent=editingSalesOrderId?'Menyimpan perubahan...':'Menyimpan...';salesOrderMessage.style.color='var(--muted)';salesOrderMessage.textContent=editingSalesOrderId?'Memperbarui Sales Order...':'Menyimpan Sales Order dan detail barang...';
+  const saveBtn=document.getElementById('saveSalesOrderBtn');saveBtn.disabled=true;saveBtn.textContent=editingSalesOrderId?'Menyimpan...':'Menyimpan...';salesOrderMessage.style.color='var(--muted)';salesOrderMessage.textContent='Menyimpan...';
   try{
     const {data:userData,error:userError}=await supabaseClient.auth.getUser();if(userError)throw userError;
     if(editingSalesOrderId){
       const id=editingSalesOrderId;
-      // Saat edit SO tersimpan, hanya jumlah yang boleh berubah dan baris boleh dihapus.
       const currentRows=[...document.querySelectorAll('.so-item-row')];
-      if(!currentRows.length)throw new Error('Sales Order harus memiliki minimal satu barang.');
       const {data:existingItems,error:existingError}=await supabaseClient.from('sales_order_items').select('id').eq('sales_order_id',id);
       if(existingError)throw existingError;
       const existingIds=new Set((existingItems||[]).map(x=>String(x.id)));
@@ -215,8 +300,7 @@ salesOrderForm.addEventListener('submit',async(event)=>{
       for(const row of currentRows){
         const itemId=row.dataset.soItemId;
         const qty=Number(row.querySelector('.so-quantity').value);
-        if(!itemId||!existingIds.has(String(itemId)))throw new Error('Detail barang berubah atau tidak valid. Tutup form lalu buka Edit kembali.');
-        if(!Number.isFinite(qty)||qty<=0)throw new Error('Jumlah setiap barang harus lebih dari 0.');
+        if(!itemId||!existingIds.has(String(itemId)))throw new Error('Detail barang tidak valid.');
         const {error}=await supabaseClient.from('sales_order_items').update({quantity:qty}).eq('id',itemId).eq('sales_order_id',id);
         if(error)throw error;
         keptIds.add(String(itemId));
@@ -229,16 +313,16 @@ salesOrderForm.addEventListener('submit',async(event)=>{
       const {error:updateError}=await supabaseClient.from('sales_orders').update({updated_at:new Date().toISOString()}).eq('id',id).eq('status','confirmed');
       if(updateError)throw updateError;
       const orderNo=editingSalesOrderNo;resetSalesOrderForm();await loadSalesOrders();await loadSoStockSummary();
-      const msg=document.getElementById('salesOrderListMessage');msg.style.color='var(--green)';msg.textContent=`Sales Order ${orderNo} berhasil diperbarui. Harga satuan tetap. Stok tidak berubah.`;
+      const msg=document.getElementById('salesOrderListMessage');msg.style.color='var(--green)';msg.textContent=`Sales Order ${orderNo} berhasil diperbarui.`;
     }else{
       const now=new Date();const stamp=`${now.getFullYear()}${String(now.getMonth()+1).padStart(2,'0')}${String(now.getDate()).padStart(2,'0')}`;
       const randomPart=Math.random().toString(36).slice(2,7).toUpperCase();const orderNo=`SO-${stamp}-${randomPart}`;
       const {data:order,error:orderError}=await supabaseClient.from('sales_orders').insert({order_no:orderNo,order_date:orderDate,customer_id:Number(customerId),warehouse_id:null,status:'confirmed',notes,created_by:userData.user?.id||null}).select('id,order_no').single();
       if(orderError)throw orderError;
       const {error:itemsError}=await supabaseClient.from('sales_order_items').insert(orderItems.map(item=>({...item,sales_order_id:order.id})));
-      if(itemsError){await supabaseClient.from('sales_orders').delete().eq('id',order.id);throw new Error('Detail barang gagal disimpan. SO sementara dibatalkan. Detail: '+itemsError.message);}
+      if(itemsError){await supabaseClient.from('sales_orders').delete().eq('id',order.id);throw new Error('Detail barang gagal disimpan: '+itemsError.message);}
       resetSalesOrderForm();await loadSalesOrders();await loadSoStockSummary();
-      const msg=document.getElementById('salesOrderListMessage');msg.style.color='var(--green)';msg.textContent=`Sales Order ${order.order_no} berhasil disimpan. Stok belum berubah.`;
+      const msg=document.getElementById('salesOrderListMessage');msg.style.color='var(--green)';msg.textContent=`Sales Order ${order.order_no} berhasil disimpan.`;
     }
   }catch(error){salesOrderMessage.style.color='var(--red)';salesOrderMessage.textContent='Gagal menyimpan Sales Order: '+(error.message||String(error));}
   finally{saveBtn.disabled=false;saveBtn.textContent=editingSalesOrderId?'Simpan Perubahan':'Simpan Sales Order';}
@@ -249,19 +333,16 @@ async function loadSoStockSummary(){
   if(!supabaseClient){message.textContent='Koneksi Supabase belum siap.';return;}
   body.innerHTML='<tr><td colspan="4">Memuat data...</td></tr>';message.textContent='Menghitung kebutuhan pesanan...';
   try{
-    const [ordersRes,itemsRes,productsRes,deliveriesRes,deliveryItemsRes]=await Promise.all([
+    const [ordersRes,itemsRes,productsRes,deliveryItemsRes]=await Promise.all([
       supabaseClient.from('sales_orders').select('id,status').eq('status','confirmed'),
       supabaseClient.from('sales_order_items').select('id,sales_order_id,product_id,quantity'),
       supabaseClient.from('products').select('id,product_code,name,is_active'),
-      supabaseClient.from('deliveries').select('id,status'),
       supabaseClient.from('delivery_items').select('sales_order_item_id,quantity_shipped')
     ]);
-    const err=[ordersRes,itemsRes,productsRes,deliveriesRes,deliveryItemsRes].find(r=>r.error);if(err)throw err.error;
+    const err=[ordersRes,itemsRes,productsRes,deliveryItemsRes].find(r=>r.error);if(err)throw err.error;
     const activeOrderIds=new Set((ordersRes.data||[]).map(o=>String(o.id)));
     const itemMap=new Map((itemsRes.data||[]).filter(i=>activeOrderIds.has(String(i.sales_order_id))).map(i=>[String(i.id),i]));
     const shipped=new Map();
-    // Semua baris delivery_items dianggap sudah terkirim karena skema saat ini belum membedakan
-    // quantity yang hanya direncanakan dari quantity yang benar-benar keluar.
     for(const di of deliveryItemsRes.data||[])shipped.set(String(di.sales_order_item_id),(shipped.get(String(di.sales_order_item_id))||0)+Number(di.quantity_shipped||0));
     const needed=new Map();
     for(const item of itemMap.values()){
@@ -269,9 +350,9 @@ async function loadSoStockSummary(){
       if(outstanding>0)needed.set(String(item.product_id),(needed.get(String(item.product_id))||0)+outstanding);
     }
     const products=(productsRes.data||[]).filter(p=>needed.has(String(p.id)));
-    if(!products.length){body.innerHTML='<tr><td colspan="4" class="empty">Tidak ada kebutuhan stok dari Sales Order aktif.</td></tr>';}
-    else body.innerHTML=products.map(p=>`<tr><td>${escHtml(p.product_code||'-')}</td><td>${escHtml(p.name||'-')}</td><td>${Number(needed.get(String(p.id))||0).toLocaleString('id-ID')}</td><td><span class="status">Belum dicatat</span></td></tr>`).join('');
-    message.textContent='Kebutuhan dihitung dari SO aktif dikurangi jumlah pada detail pengiriman. Stok tersedia belum dapat ditampilkan karena database belum memiliki tabel stok aktual.';
+    if(!products.length){body.innerHTML='<tr><td colspan="4" class="empty">Tidak ada kebutuhan stok dari Sales Order aktif. Semua pesanan sudah terkirim atau belum ada pesanan baru.</td></tr>';}
+    else body.innerHTML=products.map(p=>`<tr><td>${escHtml(p.product_code||'-')}</td><td>${escHtml(p.name||'-')}</td><td>${Number(needed.get(String(p.id))||0).toLocaleString('id-ID')}</td><td><span class="status">Menunggu tabel stok</span></td></tr>`).join('');
+    message.textContent='Kebutuhan dihitung dari SO aktif dikurangi jumlah barang yang sudah dibuatkan Surat Jalan.';
   }catch(error){body.innerHTML='<tr><td colspan="4">Gagal memuat kebutuhan stok.</td></tr>';message.textContent='Gagal menghitung kebutuhan stok: '+error.message;}
 }
 function resetSalesOrderForm(){
@@ -295,7 +376,7 @@ function statusText(status){return ({confirmed:'Dikonfirmasi',cancelled:'Dibatal
 async function viewSalesOrder(id){const modal=ensureSoModal();modal.style.display='flex';modal.querySelector('#soModalTitle').textContent='Detail Sales Order';modal.querySelector('#soModalMessage').textContent='Memuat detail...';modal.querySelector('#soModalContent').innerHTML='';try{const d=await getSalesOrderDetail(id);const total=d.items.reduce((sum,i)=>sum+Number(i.quantity||0)*Number(i.unit_price||0)-Number(i.discount_amount||0),0);modal.querySelector('#soModalTitle').textContent=d.order.order_no;modal.querySelector('#soModalMessage').textContent='Detail Sales Order';modal.querySelector('#soModalContent').innerHTML=`<div class="so-modal-grid"><div class="so-modal-info"><small>Tanggal</small><strong>${escHtml(d.order.order_date||'-')}</strong></div><div class="so-modal-info"><small>Status</small><strong>${escHtml(statusText(d.order.status))}</strong></div><div class="so-modal-info"><small>Pelanggan</small><strong>${escHtml(d.customer.name||'-')}</strong></div><div class="so-modal-info"><small>Catatan</small><strong>${escHtml(d.order.notes||'-')}</strong></div></div><div class="tablewrap"><table><thead><tr><th>Kode</th><th>Produk</th><th>Satuan</th><th>Jumlah</th><th>Harga</th><th>Subtotal</th></tr></thead><tbody>${d.items.map(i=>`<tr><td>${escHtml(i.product.product_code||'-')}</td><td>${escHtml(i.product.name)}</td><td>${escHtml(i.unit.name||i.unit.code||'-')}</td><td>${escHtml(i.quantity)}</td><td>${rupiah(i.unit_price)}</td><td>${rupiah(Number(i.quantity)*Number(i.unit_price)-Number(i.discount_amount||0))}</td></tr>`).join('')}</tbody></table></div><div class="so-modal-total">Total: ${rupiah(total)}</div>`;}catch(error){modal.querySelector('#soModalMessage').textContent='Gagal memuat detail: '+error.message;}}
 async function editSalesOrder(id){
   try{
-    const detail=await getSalesOrderDetail(id);if(detail.order.status!=='confirmed'){alert('Hanya Sales Order berstatus Dikonfirmasi yang dapat diedit. Jika status lama masih Draft, perbarui statusnya terlebih dahulu.');return;}
+    const detail=await getSalesOrderDetail(id);if(detail.order.status!=='confirmed'){alert('Hanya Sales Order berstatus Dikonfirmasi yang dapat diedit.');return;}
     await loadSoChoices();
     if(!soCustomers.some(c=>String(c.id)===String(detail.customer.id))&&detail.customer.id)soCustomers.push({...detail.customer,is_active:false});
     detail.items.forEach(i=>{if(i.product&&i.product.id&&!soProducts.some(p=>String(p.id)===String(i.product.id)))soProducts.push(i.product);});
@@ -308,24 +389,618 @@ async function editSalesOrder(id){
   }catch(error){alert('Gagal membuka Sales Order untuk diedit: '+error.message);}
 }
 async function cancelSalesOrder(id){
-  try{const detail=await getSalesOrderDetail(id);if(detail.order.status!=='confirmed'){alert('Hanya Sales Order berstatus Dikonfirmasi yang dapat dibatalkan. Jika status lama masih Draft, perbarui statusnya terlebih dahulu.');return;}if(!confirm(`Batalkan ${detail.order.order_no}? Pesanan akan tetap tersimpan dengan status Dibatalkan. Stok tidak berubah.`))return;
-    const {error}=await supabaseClient.from('sales_orders').update({status:'cancelled',updated_at:new Date().toISOString()}).eq('id',id).eq('status','confirmed');if(error)throw error;await loadSalesOrders();await loadSoStockSummary();const m=document.getElementById('salesOrderListMessage');m.style.color='var(--green)';m.textContent=`Sales Order ${detail.order.order_no} dibatalkan. Stok tidak berubah.`;
+  try{const detail=await getSalesOrderDetail(id);if(detail.order.status!=='confirmed'){alert('Hanya Sales Order berstatus Dikonfirmasi yang dapat dibatalkan.');return;}if(!confirm(`Batalkan ${detail.order.order_no}? Pesanan akan tetap tersimpan dengan status Dibatalkan.`))return;
+    const {error}=await supabaseClient.from('sales_orders').update({status:'cancelled',updated_at:new Date().toISOString()}).eq('id',id).eq('status','confirmed');if(error)throw error;await loadSalesOrders();await loadSoStockSummary();const m=document.getElementById('salesOrderListMessage');m.style.color='var(--green)';m.textContent=`Sales Order ${detail.order.order_no} dibatalkan.`;
   }catch(error){alert('Gagal membatalkan Sales Order: '+error.message);}
 }
 async function printSalesOrder(id){
-  const win=window.open('','_blank');if(!win){alert('Browser memblokir jendela cetak. Izinkan pop-up untuk website ini lalu coba lagi.');return;}
+  const win=window.open('','_blank');if(!win){alert('Browser memblokir jendela cetak. Izinkan pop-up untuk website ini.');return;}
   win.document.write('<!doctype html><html><head><title>Cetak Sales Order</title></head><body style="font:14px Arial;padding:24px">Memuat Sales Order...</body></html>');win.document.close();
   try{const d=await getSalesOrderDetail(id);const total=d.items.reduce((sum,i)=>sum+Number(i.quantity||0)*Number(i.unit_price||0)-Number(i.discount_amount||0),0);win.document.open();win.document.write(`<!doctype html><html lang="id"><head><meta charset="utf-8"><title>${escHtml(d.order.order_no)}</title><style>body{font:13px Arial,sans-serif;color:#111;margin:24px}h1{font-size:20px;margin:0 0 5px}.muted{color:#555}.meta{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:20px 0}table{width:100%;border-collapse:collapse;margin-top:18px}th,td{border:1px solid #aaa;padding:8px;text-align:left}th{background:#f2f2f2}.num{text-align:right}.total{text-align:right;font-size:17px;font-weight:bold;margin-top:18px}.sign{display:flex;justify-content:space-between;margin-top:70px;text-align:center}.sign div{width:30%}@media print{button{display:none}}</style></head><body><h1>SALES ORDER</h1><div class="muted">${escHtml(d.order.order_no)} · Status: ${escHtml(statusText(d.order.status))}</div><div class="meta"><div><strong>Tanggal:</strong> ${escHtml(d.order.order_date||'-')}</div><div><strong>Pelanggan:</strong> ${escHtml(d.customer.name||'-')}</div><div><strong>Telepon:</strong> ${escHtml(d.customer.phone||'-')}</div><div><strong>Alamat:</strong> ${escHtml(d.customer.address||'-')}</div></div><table><thead><tr><th>Kode</th><th>Nama Produk</th><th>Satuan</th><th class="num">Jumlah</th><th class="num">Harga Satuan</th><th class="num">Subtotal</th></tr></thead><tbody>${d.items.map(i=>`<tr><td>${escHtml(i.product.product_code||'-')}</td><td>${escHtml(i.product.name)}</td><td>${escHtml(i.unit.name||i.unit.code||'-')}</td><td class="num">${escHtml(i.quantity)}</td><td class="num">${rupiah(i.unit_price)}</td><td class="num">${rupiah(Number(i.quantity)*Number(i.unit_price)-Number(i.discount_amount||0))}</td></tr>`).join('')}</tbody></table><div class="total">Total: ${rupiah(total)}</div><p><strong>Catatan:</strong> ${escHtml(d.order.notes||'-')}</p><div class="sign"><div>Disiapkan oleh,<br><br><br>(________________)</div><div>Diperiksa oleh,<br><br><br>(________________)</div><div>Diterima oleh,<br><br><br>(________________)</div></div><script>window.onload=()=>window.print();<\/script></body></html>`);win.document.close();}catch(error){win.document.body.innerHTML='Gagal memuat Sales Order: '+escHtml(error.message);}
 }
 document.getElementById('salesOrdersBody').addEventListener('click',e=>{const btn=e.target.closest('[data-so-action]');if(!btn)return;const id=btn.dataset.soId;const action=btn.dataset.soAction;if(action==='view')viewSalesOrder(id);else if(action==='edit')editSalesOrder(id);else if(action==='cancel')cancelSalesOrder(id);else if(action==='print')printSalesOrder(id);});
 
-// Tahap pertama integrasi Data Master: membaca data nyata dari tabel Supabase.
-const escHtml=(value)=>String(value??'').replace(/[&<>"']/g,ch=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
-function setTableRows(id, rows, colspan, emptyText='Belum ada data.'){
-  const body=document.getElementById(id);
-  if(!rows||rows.length===0){body.innerHTML=`<tr><td colspan="${colspan}">${emptyText}</td></tr>`;return;}
-  body.innerHTML=rows.join('');
+
+// --- MODUL PENGIRIMAN BARANG (DELIVERIES) ---
+let activeDeliverySoMap = new Map();
+let editingDeliveryId = null;
+
+async function loadDeliveries(){
+  const msg = document.getElementById('deliveryListMessage');
+  const body = document.getElementById('deliveriesBody');
+  msg.style.color = 'var(--muted)'; msg.textContent = 'Memuat data pengiriman dari Supabase...';
+  body.innerHTML = '<tr><td colspan="8">Memuat data...</td></tr>';
+  try {
+    const [delivRes, soRes, custRes, whRes, itemsRes] = await Promise.all([
+      supabaseClient.from('deliveries').select('id, delivery_no, sales_order_id, delivery_date, driver_name, warehouse_id, status, notes, created_at').order('created_at', {ascending: false}),
+      supabaseClient.from('sales_orders').select('id, order_no, customer_id'),
+      supabaseClient.from('customers').select('id, name'),
+      supabaseClient.from('warehouses').select('id, name, code'),
+      supabaseClient.from('delivery_items').select('delivery_id, quantity_shipped')
+    ]);
+    const err = [delivRes, soRes, custRes, whRes, itemsRes].find(r => r.error);
+    if(err) throw err.error;
+
+    const deliveries = delivRes.data || [];
+    const soMap = new Map((soRes.data || []).map(s => [String(s.id), s]));
+    const custMap = new Map((custRes.data || []).map(c => [String(c.id), c.name]));
+    const whMap = new Map((whRes.data || []).map(w => [String(w.id), w.name || w.code]));
+
+    document.getElementById('deliveryCount').textContent = `${deliveries.length} Surat Jalan tersimpan`;
+
+    if(!deliveries.length){
+      body.innerHTML = '<tr><td colspan="8" class="empty">Belum ada catatan pengiriman (Surat Jalan).</td></tr>';
+      msg.textContent = 'Data siap. Klik "Catat Pengiriman Baru" untuk membuat Surat Jalan.';
+      msg.style.color = 'var(--green)';
+      return;
+    }
+
+    body.innerHTML = deliveries.map(d => {
+      const so = soMap.get(String(d.sales_order_id)) || {};
+      const custName = custMap.get(String(so.customer_id)) || 'Pelanggan tidak ditemukan';
+      const whName = whMap.get(String(d.warehouse_id)) || 'Gudang Utama';
+      const statusLabel = d.status === 'shipped' ? 'Dikirim' : (d.status || 'Aktif');
+
+      return `<tr>
+        <td><strong>${escHtml(d.delivery_no)}</strong></td>
+        <td>${escHtml(so.order_no || '-')}</td>
+        <td>${escHtml(d.delivery_date || '-')}</td>
+        <td>${escHtml(custName)}</td>
+        <td>${escHtml(whName)}</td>
+        <td>${escHtml(d.driver_name || '-')}</td>
+        <td><span class="status green">${escHtml(statusLabel)}</span></td>
+        <td>
+          <div class="so-actions">
+            <button type="button" class="so-action-btn" data-deliv-action="view" data-deliv-id="${escHtml(d.id)}" title="Lihat" aria-label="Lihat ${escHtml(d.delivery_no)}">⌕</button>
+            <button type="button" class="so-action-btn" data-deliv-action="edit" data-deliv-id="${escHtml(d.id)}" title="Edit" aria-label="Edit ${escHtml(d.delivery_no)}">✎</button>
+            <button type="button" class="so-action-btn" data-deliv-action="print" data-deliv-id="${escHtml(d.id)}" title="Cetak Surat Jalan" aria-label="Cetak ${escHtml(d.delivery_no)}">⎙</button>
+          </div>
+        </td>
+      </tr>`;
+    }).join('');
+
+    msg.textContent = 'Data pengiriman berhasil dimuat dari Supabase.';
+    msg.style.color = 'var(--green)';
+  } catch(error) {
+    body.innerHTML = '<tr><td colspan="8">Gagal memuat data pengiriman.</td></tr>';
+    msg.style.color = 'var(--red)'; msg.textContent = 'Error: ' + error.message;
+  }
 }
+
+async function prepareDeliveryForm(){
+  const soSelect = document.getElementById('deliverySoSelect');
+  const whSelect = document.getElementById('deliveryWarehouse');
+  const formMsg = document.getElementById('deliveryFormMessage');
+  formMsg.textContent = 'Memuat pilihan Sales Order & Gudang...'; formMsg.style.color = 'var(--muted)';
+  soSelect.innerHTML = '<option value="">Memuat...</option>';
+  whSelect.innerHTML = '<option value="">Memuat...</option>';
+
+  try {
+    const [soRes, custRes, whRes, soItemsRes, delivItemsRes] = await Promise.all([
+      supabaseClient.from('sales_orders').select('id, order_no, order_date, customer_id, status').eq('status', 'confirmed').order('created_at', {ascending: false}),
+      supabaseClient.from('customers').select('id, name'),
+      supabaseClient.from('warehouses').select('id, name, code, is_active').eq('is_active', true).order('name'),
+      supabaseClient.from('sales_order_items').select('id, sales_order_id, product_id, unit_id, quantity'),
+      supabaseClient.from('delivery_items').select('sales_order_item_id, quantity_shipped')
+    ]);
+
+    const err = [soRes, custRes, whRes, soItemsRes, delivItemsRes].find(r => r.error);
+    if(err) throw err.error;
+
+    const custMap = new Map((custRes.data || []).map(c => [String(c.id), c.name]));
+    const warehouses = whRes.data || [];
+    const shippedMap = new Map();
+    for(const di of delivItemsRes.data || []) {
+      shippedMap.set(String(di.sales_order_item_id), (shippedMap.get(String(di.sales_order_item_id)) || 0) + Number(di.quantity_shipped || 0));
+    }
+
+    // Kelompokkan SO item
+    const soItemsGroup = new Map();
+    for(const item of soItemsRes.data || []) {
+      const list = soItemsGroup.get(String(item.sales_order_id)) || [];
+      list.push({...item, shipped: shippedMap.get(String(item.id)) || 0});
+      soItemsGroup.set(String(item.sales_order_id), list);
+    }
+
+    activeDeliverySoMap.clear();
+    const availableSos = [];
+
+    for(const so of soRes.data || []) {
+      const items = soItemsGroup.get(String(so.id)) || [];
+      const hasRemaining = items.some(i => (Number(i.quantity) - i.shipped) > 0.0001);
+      if(hasRemaining || editingDeliveryId) {
+        const custName = custMap.get(String(so.customer_id)) || 'Pelanggan';
+        activeDeliverySoMap.set(String(so.id), {so, custName, items});
+        availableSos.push({id: so.id, label: `${so.order_no} — ${custName}`});
+      }
+    }
+
+    if(!availableSos.length && !editingDeliveryId) {
+      soSelect.innerHTML = '<option value="">Semua SO berstatus Dikonfirmasi telah selesai dikirim</option>';
+    } else {
+      soSelect.innerHTML = '<option value="">Pilih Sales Order yang akan dikirim...</option>' + 
+        availableSos.map(s => `<option value="${escHtml(s.id)}">${escHtml(s.label)}</option>`).join('');
+    }
+
+    whSelect.innerHTML = '<option value="">Pilih Gudang Asal...</option>' + 
+      warehouses.map(w => `<option value="${escHtml(w.id)}">${escHtml(w.name || w.code)}</option>`).join('');
+
+    formMsg.textContent = '';
+  } catch(error) {
+    formMsg.style.color = 'var(--red)';
+    formMsg.textContent = 'Gagal memuat pilihan SO/Gudang: ' + error.message;
+  }
+}
+
+async function renderDeliveryItemsForSo(soId, existingDelivItemMap = null) {
+  const body = document.getElementById('deliveryItemsBody');
+  if(!soId) {
+    body.innerHTML = '<tr><td colspan="6" class="empty">Pilih Sales Order terlebih dahulu untuk menampilkan rincian barang.</td></tr>';
+    return;
+  }
+
+  body.innerHTML = '<tr><td colspan="6">Memuat rincian barang pesanan...</td></tr>';
+
+  try {
+    const data = activeDeliverySoMap.get(String(soId));
+    if(!data) {
+      // Jika SO tidak ada di map aktif (misal saat edit pengiriman lama), load langsung dari DB
+      const [itemsRes, prodRes, unitRes] = await Promise.all([
+        supabaseClient.from('sales_order_items').select('id, sales_order_id, product_id, unit_id, quantity').eq('sales_order_id', soId),
+        supabaseClient.from('products').select('id, product_code, name'),
+        supabaseClient.from('units').select('id, code, name')
+      ]);
+      const pMap = new Map((prodRes.data || []).map(p => [String(p.id), p]));
+      const uMap = new Map((unitRes.data || []).map(u => [String(u.id), u]));
+      
+      const delivItemsRes = await supabaseClient.from('delivery_items').select('sales_order_item_id, quantity_shipped');
+      const shippedMap = new Map();
+      for(const di of delivItemsRes.data || []) shippedMap.set(String(di.sales_order_item_id), (shippedMap.get(String(di.sales_order_item_id)) || 0) + Number(di.quantity_shipped || 0));
+
+      const items = (itemsRes.data || []).map(i => ({
+        ...i,
+        product: pMap.get(String(i.product_id)) || {},
+        unit: uMap.get(String(i.unit_id)) || {},
+        shipped: shippedMap.get(String(i.id)) || 0
+      }));
+
+      renderDeliveryItemRows(items, existingDelivItemMap);
+      return;
+    }
+
+    const prodIds = [...new Set(data.items.map(i => i.product_id))];
+    const unitIds = [...new Set(data.items.map(i => i.unit_id))];
+
+    const [prodRes, unitRes] = await Promise.all([
+      supabaseClient.from('products').select('id, product_code, name').in('id', prodIds.length ? prodIds : [0]),
+      supabaseClient.from('units').select('id, code, name').in('id', unitIds.length ? unitIds : [0])
+    ]);
+
+    const pMap = new Map((prodRes.data || []).map(p => [String(p.id), p]));
+    const uMap = new Map((unitRes.data || []).map(u => [String(u.id), u]));
+
+    const enrichedItems = data.items.map(i => ({
+      ...i,
+      product: pMap.get(String(i.product_id)) || {},
+      unit: uMap.get(String(i.unit_id)) || {}
+    }));
+
+    renderDeliveryItemRows(enrichedItems, existingDelivItemMap);
+
+  } catch(error) {
+    body.innerHTML = '<tr><td colspan="6">Gagal memuat barang SO: ' + escHtml(error.message) + '</td></tr>';
+  }
+}
+
+function renderDeliveryItemRows(items, existingDelivItemMap) {
+  const body = document.getElementById('deliveryItemsBody');
+  if(!items.length) {
+    body.innerHTML = '<tr><td colspan="6" class="empty">Tidak ada barang dalam Sales Order ini.</td></tr>';
+    return;
+  }
+
+  body.innerHTML = items.map(i => {
+    const totalQty = Number(i.quantity || 0);
+    // Jika sedang edit, kurangi jumlah shipped sebelumnya dengan kuantitas yang sedang diedit ini
+    const prevShipped = editingDeliveryId && existingDelivItemMap && existingDelivItemMap.has(String(i.id))
+      ? Math.max(0, Number(i.shipped || 0) - Number(existingDelivItemMap.get(String(i.id)) || 0))
+      : Number(i.shipped || 0);
+
+    const remaining = Math.max(0, totalQty - prevShipped);
+    const defaultShip = editingDeliveryId && existingDelivItemMap && existingDelivItemMap.has(String(i.id))
+      ? existingDelivItemMap.get(String(i.id))
+      : remaining;
+
+    return `<tr data-so-item-id="${escHtml(i.id)}" data-remaining="${remaining}">
+      <td><strong>${escHtml(i.product.name || 'Produk')}</strong><br><small style="color:var(--muted)">Kode: ${escHtml(i.product.product_code || '-')}</small></td>
+      <td>${escHtml(i.unit.name || i.unit.code || '-')}</td>
+      <td style="text-align:right">${totalQty.toLocaleString('id-ID')}</td>
+      <td style="text-align:right">${prevShipped.toLocaleString('id-ID')}</td>
+      <td style="text-align:right"><strong>${remaining.toLocaleString('id-ID')}</strong></td>
+      <td>
+        <input class="deliv-ship-qty" type="number" min="0" max="${remaining}" step="0.001" value="${defaultShip}" style="text-align:right;font-weight:bold" required>
+      </td>
+    </tr>`;
+  }).join('');
+}
+
+document.getElementById('deliverySoSelect').addEventListener('change', (e) => {
+  renderDeliveryItemsForSo(e.target.value);
+});
+
+document.getElementById('showDeliveryFormBtn').addEventListener('click', async () => {
+  editingDeliveryId = null;
+  document.getElementById('deliveryFormTitle').textContent = 'Catat Pengiriman Baru';
+  document.getElementById('saveDeliveryBtn').textContent = 'Simpan Surat Jalan';
+  document.getElementById('deliveryRecordForm').reset();
+  document.getElementById('deliveryDate').value = todayLocal();
+  document.getElementById('deliveryForm').style.display = 'block';
+  await prepareDeliveryForm();
+  document.getElementById('deliveryForm').scrollIntoView({behavior:'smooth', block:'start'});
+});
+
+document.getElementById('closeDeliveryFormBtn').addEventListener('click', () => {
+  document.getElementById('deliveryForm').style.display = 'none';
+});
+document.getElementById('cancelDeliveryBtn').addEventListener('click', () => {
+  document.getElementById('deliveryForm').style.display = 'none';
+});
+document.getElementById('refreshDeliveriesBtn').addEventListener('click', loadDeliveries);
+
+document.getElementById('deliveryRecordForm').addEventListener('submit', async (e) => {
+  e.preventDefault();
+  const formMsg = document.getElementById('deliveryFormMessage');
+  const saveBtn = document.getElementById('saveDeliveryBtn');
+
+  if(!supabaseClient) { formMsg.style.color = 'var(--red)'; formMsg.textContent = 'Koneksi database belum siap.'; return; }
+
+  const soId = document.getElementById('deliverySoSelect').value;
+  const warehouseId = document.getElementById('deliveryWarehouse').value;
+  const deliveryDate = document.getElementById('deliveryDate').value;
+  const driverName = document.getElementById('deliveryDriver').value.trim();
+  const notes = document.getElementById('deliveryNotes').value.trim() || null;
+
+  if(!soId || !warehouseId || !deliveryDate || !driverName) {
+    formMsg.style.color = 'var(--red)'; formMsg.textContent = 'Lengkapi semua kolom bertanda bintang (*)'; return;
+  }
+
+  const rows = [...document.querySelectorAll('#deliveryItemsBody tr[data-so-item-id]')];
+  if(!rows.length) {
+    formMsg.style.color = 'var(--red)'; formMsg.textContent = 'Tidak ada barang yang siap dikirim.'; return;
+  }
+
+  const itemsToShip = [];
+  let totalShippedCount = 0;
+
+  for(const row of rows) {
+    const soItemId = row.dataset.soItemId;
+    const remaining = Number(row.dataset.remaining || 0);
+    const shipQty = Number(row.querySelector('.deliv-ship-qty').value || 0);
+
+    if(shipQty < 0) {
+      formMsg.style.color = 'var(--red)'; formMsg.textContent = 'Jumlah kirim tidak boleh negatif.'; return;
+    }
+    if(shipQty > remaining + 0.0001) {
+      formMsg.style.color = 'var(--red)'; formMsg.textContent = `Jumlah kirim melebihi sisa pesanan SO (${remaining}).`; return;
+    }
+
+    if(shipQty > 0) {
+      itemsToShip.push({ sales_order_item_id: Number(soItemId), quantity_shipped: shipQty });
+      totalShippedCount += shipQty;
+    }
+  }
+
+  if(totalShippedCount <= 0) {
+    formMsg.style.color = 'var(--red)'; formMsg.textContent = 'Masukkan jumlah barang yang dikirim (minimal satu produk lebih dari 0).'; return;
+  }
+
+  saveBtn.disabled = true; saveBtn.textContent = 'Menyimpan...';
+  formMsg.style.color = 'var(--muted)'; formMsg.textContent = 'Menyimpan data Surat Jalan...';
+
+  try {
+    const {data: userData, error: userError} = await supabaseClient.auth.getUser();
+    if(userError) throw userError;
+
+    if(editingDeliveryId) {
+      const delivId = editingDeliveryId;
+      const {error: updateErr} = await supabaseClient.from('deliveries').update({
+        delivery_date: deliveryDate,
+        driver_name: driverName,
+        warehouse_id: Number(warehouseId),
+        notes: notes
+      }).eq('id', delivId);
+
+      if(updateErr) throw updateErr;
+
+      // Hapus item lama, masukkan yang baru
+      const {error: delErr} = await supabaseClient.from('delivery_items').delete().eq('delivery_id', delivId);
+      if(delErr) throw delErr;
+
+      const {error: itemInsertErr} = await supabaseClient.from('delivery_items').insert(
+        itemsToShip.map(it => ({...it, delivery_id: delivId}))
+      );
+      if(itemInsertErr) throw itemInsertErr;
+
+      document.getElementById('deliveryForm').style.display = 'none';
+      await loadDeliveries();
+      const listMsg = document.getElementById('deliveryListMessage');
+      listMsg.style.color = 'var(--green)'; listMsg.textContent = 'Surat Jalan berhasil diperbarui.';
+
+    } else {
+      const now = new Date();
+      const stamp = `${now.getFullYear()}${String(now.getMonth()+1).padStart(2,'0')}${String(now.getDate()).padStart(2,'0')}`;
+      const randomPart = Math.random().toString(36).slice(2,6).toUpperCase();
+      const deliveryNo = `SJ-${stamp}-${randomPart}`;
+
+      const {data: deliv, error: delivErr} = await supabaseClient.from('deliveries').insert({
+        delivery_no: deliveryNo,
+        sales_order_id: Number(soId),
+        delivery_date: deliveryDate,
+        driver_name: driverName,
+        warehouse_id: Number(warehouseId),
+        status: 'shipped',
+        notes: notes,
+        created_by: userData.user?.id || null
+      }).select('id, delivery_no').single();
+
+      if(delivErr) throw delivErr;
+
+      const {error: itemsErr} = await supabaseClient.from('delivery_items').insert(
+        itemsToShip.map(it => ({...it, delivery_id: deliv.id}))
+      );
+
+      if(itemsErr) {
+        await supabaseClient.from('deliveries').delete().eq('id', deliv.id);
+        throw itemsErr;
+      }
+
+      document.getElementById('deliveryForm').style.display = 'none';
+      await loadDeliveries();
+      const listMsg = document.getElementById('deliveryListMessage');
+      listMsg.style.color = 'var(--green)';
+      listMsg.textContent = `Surat Jalan ${deliv.delivery_no} berhasil dibuat. Rincian pengiriman telah dicatat.`;
+    }
+
+  } catch(error) {
+    formMsg.style.color = 'var(--red)';
+    formMsg.textContent = 'Gagal menyimpan Surat Jalan: ' + (error.message || String(error));
+  } finally {
+    saveBtn.disabled = false; saveBtn.textContent = editingDeliveryId ? 'Simpan Perubahan' : 'Simpan Surat Jalan';
+  }
+});
+
+async function viewDeliveryDetail(id) {
+  const modal = ensureSoModal();
+  modal.style.display = 'flex';
+  modal.querySelector('#soModalTitle').textContent = 'Detail Surat Jalan';
+  modal.querySelector('#soModalMessage').textContent = 'Memuat detail pengiriman...';
+  modal.querySelector('#soModalContent').innerHTML = '';
+
+  try {
+    const [delivRes, itemsRes, soRes, custRes, whRes, prodRes, unitRes] = await Promise.all([
+      supabaseClient.from('deliveries').select('id, delivery_no, sales_order_id, delivery_date, driver_name, warehouse_id, status, notes').eq('id', id).single(),
+      supabaseClient.from('delivery_items').select('sales_order_item_id, quantity_shipped').eq('delivery_id', id),
+      supabaseClient.from('sales_orders').select('id, order_no, customer_id'),
+      supabaseClient.from('customers').select('id, name, address, phone'),
+      supabaseClient.from('warehouses').select('id, name, code'),
+      supabaseClient.from('products').select('id, product_code, name'),
+      supabaseClient.from('units').select('id, code, name')
+    ]);
+
+    const err = [delivRes, itemsRes, soRes, custRes, whRes, prodRes, unitRes].find(r => r.error);
+    if(err) throw err.error;
+
+    const deliv = delivRes.data;
+    const soMap = new Map((soRes.data || []).map(s => [String(s.id), s]));
+    const custMap = new Map((custRes.data || []).map(c => [String(c.id), c]));
+    const whMap = new Map((whRes.data || []).map(w => [String(w.id), w.name || w.code]));
+    const pMap = new Map((prodRes.data || []).map(p => [String(p.id), p]));
+    const uMap = new Map((unitRes.data || []).map(u => [String(u.id), u]));
+
+    const so = soMap.get(String(deliv.sales_order_id)) || {};
+    const cust = custMap.get(String(so.customer_id)) || {};
+    const whName = whMap.get(String(deliv.warehouse_id)) || 'Gudang Utama';
+
+    // Dapatkan rincian SO item
+    const soItemIds = itemsRes.data.map(i => i.sales_order_item_id);
+    const {data: soItemsData} = await supabaseClient.from('sales_order_items').select('id, product_id, unit_id').in('id', soItemIds.length ? soItemIds : [0]);
+    const soItemMap = new Map((soItemsData || []).map(i => [String(i.id), i]));
+
+    const items = itemsRes.data.map(it => {
+      const soIt = soItemMap.get(String(it.sales_order_item_id)) || {};
+      return {
+        ...it,
+        product: pMap.get(String(soIt.product_id)) || {name:'Produk'},
+        unit: uMap.get(String(soIt.unit_id)) || {name:'-'}
+      };
+    });
+
+    modal.querySelector('#soModalTitle').textContent = deliv.delivery_no;
+    modal.querySelector('#soModalMessage').textContent = 'Detail Surat Jalan Pengiriman';
+    modal.querySelector('#soModalContent').innerHTML = `
+      <div class="so-modal-grid">
+        <div class="so-modal-info"><small>No. Sales Order</small><strong>${escHtml(so.order_no || '-')}</strong></div>
+        <div class="so-modal-info"><small>Tanggal Kirim</small><strong>${escHtml(deliv.delivery_date || '-')}</strong></div>
+        <div class="so-modal-info"><small>Pelanggan</small><strong>${escHtml(cust.name || '-')}</strong></div>
+        <div class="so-modal-info"><small>Gudang Asal</small><strong>${escHtml(whName)}</strong></div>
+        <div class="so-modal-info"><small>Pengemudi / Kurir</small><strong>${escHtml(deliv.driver_name || '-')}</strong></div>
+        <div class="so-modal-info"><small>Catatan</small><strong>${escHtml(deliv.notes || '-')}</strong></div>
+      </div>
+      <div class="tablewrap">
+        <table>
+          <thead>
+            <tr><th>Kode Produk</th><th>Nama Produk</th><th>Satuan</th><th style="text-align:right">Jumlah Dikirim</th></tr>
+          </thead>
+          <tbody>
+            ${items.map(i => `<tr>
+              <td>${escHtml(i.product.product_code || '-')}</td>
+              <td>${escHtml(i.product.name)}</td>
+              <td>${escHtml(i.unit.name || i.unit.code || '-')}</td>
+              <td style="text-align:right"><strong>${Number(i.quantity_shipped).toLocaleString('id-ID')}</strong></td>
+            </tr>`).join('')}
+          </tbody>
+        </table>
+      </div>
+    `;
+  } catch(error) {
+    modal.querySelector('#soModalMessage').textContent = 'Gagal memuat detail pengiriman: ' + error.message;
+  }
+}
+
+async function editDeliveryDetail(id) {
+  try {
+    // Periksa apakah faktur sudah dibuat untuk pengiriman ini di sales_invoice_items
+    const {data: delivItems} = await supabaseClient.from('delivery_items').select('id').eq('delivery_id', id);
+    const delivItemIds = (delivItems || []).map(i => i.id);
+
+    if(delivItemIds.length) {
+      const {data: invoicedItems} = await supabaseClient.from('sales_invoice_items').select('id').in('delivery_item_id', delivItemIds);
+      if(invoicedItems && invoicedItems.length > 0) {
+        alert('Pengiriman ini sudah dibuatkan Faktur Penjualan dan tidak dapat diedit kembali.');
+        return;
+      }
+    }
+
+    const {data: deliv, error} = await supabaseClient.from('deliveries').select('id, delivery_no, sales_order_id, delivery_date, driver_name, warehouse_id, notes').eq('id', id).single();
+    if(error) throw error;
+
+    editingDeliveryId = deliv.id;
+    document.getElementById('deliveryFormTitle').textContent = `Edit Surat Jalan ${deliv.delivery_no}`;
+    document.getElementById('saveDeliveryBtn').textContent = 'Simpan Perubahan';
+    document.getElementById('deliveryForm').style.display = 'block';
+
+    await prepareDeliveryForm();
+
+    document.getElementById('deliverySoSelect').value = String(deliv.sales_order_id);
+    document.getElementById('deliveryWarehouse').value = String(deliv.warehouse_id || '');
+    document.getElementById('deliveryDate').value = deliv.delivery_date || todayLocal();
+    document.getElementById('deliveryDriver').value = deliv.driver_name || '';
+    document.getElementById('deliveryNotes').value = deliv.notes || '';
+
+    // Map item yang sedang ada di Surat Jalan ini
+    const {data: curItems} = await supabaseClient.from('delivery_items').select('sales_order_item_id, quantity_shipped').eq('delivery_id', id);
+    const curMap = new Map((curItems || []).map(i => [String(i.sales_order_item_id), Number(i.quantity_shipped)]));
+
+    await renderDeliveryItemsForSo(deliv.sales_order_id, curMap);
+    document.getElementById('deliveryForm').scrollIntoView({behavior:'smooth', block:'start'});
+
+  } catch(error) {
+    alert('Gagal membuka data pengiriman untuk diedit: ' + error.message);
+  }
+}
+
+async function printDeliveryDocument(id) {
+  const win = window.open('','_blank');
+  if(!win){ alert('Browser memblokir jendela cetak. Izinkan pop-up untuk aplikasi ini.'); return; }
+  win.document.write('<!doctype html><html><head><title>Cetak Surat Jalan</title></head><body style="font:14px Arial;padding:24px">Memuat dokumen Surat Jalan...</body></html>');
+  win.document.close();
+
+  try {
+    const [delivRes, itemsRes, soRes, custRes, whRes, prodRes, unitRes] = await Promise.all([
+      supabaseClient.from('deliveries').select('id, delivery_no, sales_order_id, delivery_date, driver_name, warehouse_id, status, notes').eq('id', id).single(),
+      supabaseClient.from('delivery_items').select('sales_order_item_id, quantity_shipped').eq('delivery_id', id),
+      supabaseClient.from('sales_orders').select('id, order_no, customer_id'),
+      supabaseClient.from('customers').select('id, name, address, phone'),
+      supabaseClient.from('warehouses').select('id, name, code, address'),
+      supabaseClient.from('products').select('id, product_code, name'),
+      supabaseClient.from('units').select('id, code, name')
+    ]);
+
+    const err = [delivRes, itemsRes, soRes, custRes, whRes, prodRes, unitRes].find(r => r.error);
+    if(err) throw err.error;
+
+    const deliv = delivRes.data;
+    const so = (soRes.data || []).find(s => String(s.id) === String(deliv.sales_order_id)) || {};
+    const cust = (custRes.data || []).find(c => String(c.id) === String(so.customer_id)) || {};
+    const wh = (whRes.data || []).find(w => String(w.id) === String(deliv.warehouse_id)) || {};
+    const pMap = new Map((prodRes.data || []).map(p => [String(p.id), p]));
+    const uMap = new Map((unitRes.data || []).map(u => [String(u.id), u]));
+
+    const soItemIds = itemsRes.data.map(i => i.sales_order_item_id);
+    const {data: soItemsData} = await supabaseClient.from('sales_order_items').select('id, product_id, unit_id').in('id', soItemIds.length ? soItemIds : [0]);
+    const soItemMap = new Map((soItemsData || []).map(i => [String(i.id), i]));
+
+    const items = itemsRes.data.map(it => {
+      const soIt = soItemMap.get(String(it.sales_order_item_id)) || {};
+      return {
+        ...it,
+        product: pMap.get(String(soIt.product_id)) || {name:'Produk'},
+        unit: uMap.get(String(soIt.unit_id)) || {name:'-'}
+      };
+    });
+
+    win.document.open();
+    win.document.write(`<!doctype html><html lang="id"><head><meta charset="utf-8"><title>${escHtml(deliv.delivery_no)}</title>
+    <style>
+      body{font:13px Arial,sans-serif;color:#111;margin:24px}
+      h1{font-size:20px;margin:0 0 4px}
+      .muted{color:#555}
+      .meta{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:20px 0;background:#f9f9f9;padding:12px;border-radius:6px}
+      table{width:100%;border-collapse:collapse;margin-top:16px}
+      th,td{border:1px solid #aaa;padding:8px;text-align:left}
+      th{background:#f2f2f2}
+      .num{text-align:right}
+      .sign{display:flex;justify-content:space-between;margin-top:60px;text-align:center}
+      .sign div{width:28%}
+      @media print{button{display:none}}
+    </style></head>
+    <body>
+      <h1>SURAT JALAN / PENGIRIMAN</h1>
+      <div class="muted">No: <strong>${escHtml(deliv.delivery_no)}</strong> · Ref SO: ${escHtml(so.order_no || '-')}</div>
+      <div class="meta">
+        <div><strong>Tanggal Kirim:</strong> ${escHtml(deliv.delivery_date || '-')}</div>
+        <div><strong>Toko / Pelanggan:</strong> ${escHtml(cust.name || '-')}</div>
+        <div><strong>Gudang Pengirim:</strong> ${escHtml(wh.name || 'Gudang Utama')}</div>
+        <div><strong>Alamat Tujuan:</strong> ${escHtml(cust.address || '-')}</div>
+        <div><strong>Pengemudi / Kurir:</strong> ${escHtml(deliv.driver_name || '-')}</div>
+        <div><strong>Telepon Pelanggan:</strong> ${escHtml(cust.phone || '-')}</div>
+      </div>
+      <table>
+        <thead>
+          <tr>
+            <th style="width:40px">No.</th>
+            <th>Kode Produk</th>
+            <th>Nama Barang</th>
+            <th>Satuan</th>
+            <th class="num">Jumlah Dikirim</th>
+          </tr>
+        </thead>
+        <tbody>
+          ${items.map((i, idx) => `<tr>
+            <td>${idx + 1}</td>
+            <td>${escHtml(i.product.product_code || '-')}</td>
+            <td>${escHtml(i.product.name)}</td>
+            <td>${escHtml(i.unit.name || i.unit.code || '-')}</td>
+            <td class="num"><strong>${Number(i.quantity_shipped).toLocaleString('id-ID')}</strong></td>
+          </tr>`).join('')}
+        </tbody>
+      </table>
+      <p style="margin-top:16px"><strong>Catatan:</strong> ${escHtml(deliv.notes || '-' )}</p>
+      <div class="sign">
+        <div>Pengemudi,<br><br><br>( ${escHtml(deliv.driver_name || '___________')} )</div>
+        <div>Petugas Gudang,<br><br><br>(________________)</div>
+        <div>Penerima / Toko,<br><br><br>(________________)</div>
+      </div>
+      <script>window.onload=()=>window.print();<\/script>
+    </body></html>`);
+    win.document.close();
+  } catch(error) {
+    win.document.body.innerHTML = 'Gagal memuat dokumen Surat Jalan: ' + escHtml(error.message);
+  }
+}
+
+document.getElementById('deliveriesBody').addEventListener('click', e => {
+  const btn = e.target.closest('[data-deliv-action]');
+  if(!btn) return;
+  const id = btn.dataset.delivId;
+  const action = btn.dataset.delivAction;
+  if(action === 'view') viewDeliveryDetail(id);
+  else if(action === 'edit') editDeliveryDetail(id);
+  else if(action === 'print') printDeliveryDocument(id);
+});
+
+
+// --- MODUL DATA MASTER ---
 async function loadMasterData(){
   const status=document.getElementById('masterStatus');
   status.textContent='Sedang mengambil data dari Supabase...';
@@ -338,7 +1013,7 @@ async function loadMasterData(){
   ]);
   const errors=[customersRes,productsRes,unitsRes,warehousesRes].filter(r=>r.error);
   if(errors.length){
-    status.textContent='Data belum dapat dibaca: '+errors.map(r=>r.error.message).join(' | ')+'. Periksa kebijakan akses (RLS) jika diperlukan.';
+    status.textContent='Data belum dapat dibaca: '+errors.map(r=>r.error.message).join(' | ');
     status.style.color='#b42318';
     return;
   }
@@ -359,48 +1034,38 @@ async function loadMasterData(){
   status.textContent='Koneksi berhasil. Data pada halaman ini dibaca langsung dari database Supabase.';
   status.style.color='#12815d';
 }
+function setTableRows(id, rows, colspan, emptyText='Belum ada data.'){
+  const body=document.getElementById(id);
+  if(!rows||rows.length===0){body.innerHTML=`<tr><td colspan="${colspan}">${emptyText}</td></tr>`;return;}
+  body.innerHTML=rows.join('');
+}
 document.getElementById('refreshMasterBtn').addEventListener('click',loadMasterData);
+
 const productForm=document.getElementById('productForm');
 const productFormMessage=document.getElementById('productFormMessage');
 let editingProductId=null;
 function resetProductForm(){
-  editingProductId=null;
-  productForm.reset();
-  document.getElementById('productActive').checked=true;
+  editingProductId=null; productForm.reset(); document.getElementById('productActive').checked=true;
   document.getElementById('productFormTitle').textContent='Tambah Produk';
-  document.getElementById('saveProductBtn').textContent='Simpan Produk';
-  productFormMessage.textContent='';
+  document.getElementById('saveProductBtn').textContent='Simpan Produk'; productFormMessage.textContent='';
 }
-document.getElementById('showProductFormBtn').addEventListener('click',()=>{
-  resetProductForm();
-  productForm.style.display='block';
-  document.getElementById('productCode').focus();
-});
-document.getElementById('cancelProductBtn').addEventListener('click',()=>{
-  resetProductForm();
-  productForm.style.display='none';
-});
+document.getElementById('showProductFormBtn').addEventListener('click',()=>{resetProductForm();productForm.style.display='block';document.getElementById('productCode').focus();});
+document.getElementById('cancelProductBtn').addEventListener('click',()=>{resetProductForm();productForm.style.display='none';});
 document.getElementById('productsBody').addEventListener('click',async(event)=>{
   const toggleButton=event.target.closest('[data-toggle-product]');
   if(toggleButton){
     const productId=toggleButton.getAttribute('data-toggle-product');
     const currentlyActive=toggleButton.getAttribute('data-active')==='true';
-    const nextStatus=currentlyActive?'nonaktif':'aktif';
-    if(!confirm(`Yakin ingin mengubah produk ini menjadi ${nextStatus}? Produk tidak dihapus; hanya statusnya yang diubah.`))return;
-    if(!supabaseClient){document.getElementById('masterStatus').style.color='#b42318';document.getElementById('masterStatus').textContent='Koneksi Supabase belum siap. Muat ulang halaman dan login kembali.';return;}
-    toggleButton.disabled=true;toggleButton.textContent='Menyimpan...';
+    if(!confirm(`Ubah status produk menjadi ${currentlyActive?'nonaktif':'aktif'}?`))return;
     const {error}=await supabaseClient.from('products').update({is_active:!currentlyActive}).eq('id',productId);
-    if(error){toggleButton.disabled=false;toggleButton.textContent=currentlyActive?'Nonaktifkan':'Aktifkan';document.getElementById('masterStatus').style.color='#b42318';document.getElementById('masterStatus').textContent='Gagal mengubah status produk: '+error.message;return;}
-    document.getElementById('masterStatus').style.color='#12815d';document.getElementById('masterStatus').textContent='Status produk berhasil diubah.';
-    await loadMasterData();
-    return;
+    if(error){alert('Gagal mengubah status: '+error.message);return;}
+    await loadMasterData(); return;
   }
   const button=event.target.closest('[data-edit-product]');
   if(!button)return;
   const productId=button.getAttribute('data-edit-product');
-  if(!supabaseClient){productFormMessage.style.color='var(--red)';productFormMessage.textContent='Koneksi Supabase belum siap. Muat ulang halaman dan login kembali.';return;}
   const {data,error}=await supabaseClient.from('products').select('id,product_code,name,base_unit_id,is_active').eq('id',productId).single();
-  if(error){document.getElementById('masterStatus').style.color='#b42318';document.getElementById('masterStatus').textContent='Gagal membuka produk: '+error.message;return;}
+  if(error){alert('Gagal membuka produk: '+error.message);return;}
   editingProductId=data.id;
   document.getElementById('productCode').value=data.product_code||'';
   document.getElementById('productName').value=data.name||'';
@@ -408,79 +1073,51 @@ document.getElementById('productsBody').addEventListener('click',async(event)=>{
   document.getElementById('productActive').checked=!!data.is_active;
   document.getElementById('productFormTitle').textContent='Edit Produk';
   document.getElementById('saveProductBtn').textContent='Simpan Perubahan';
-  productFormMessage.textContent='';
   productForm.style.display='block';
-  document.getElementById('productCode').focus();
-  productForm.scrollIntoView({behavior:'smooth',block:'start'});
 });
 productForm.addEventListener('submit',async(event)=>{
   event.preventDefault();
-  if(!supabaseClient){productFormMessage.style.color='var(--red)';productFormMessage.textContent='Koneksi Supabase belum siap. Muat ulang halaman dan login kembali.';return;}
-  const saveBtn=document.getElementById('saveProductBtn');
-  const wasEditing=editingProductId!==null;
-  saveBtn.disabled=true;saveBtn.textContent='Menyimpan...';
-  productFormMessage.style.color='var(--muted)';productFormMessage.textContent=wasEditing?'Menyimpan perubahan produk...':'Menyimpan produk ke database...';
+  const saveBtn=document.getElementById('saveProductBtn'); saveBtn.disabled=true;
   const payload={
     product_code:document.getElementById('productCode').value.trim(),
     name:document.getElementById('productName').value.trim(),
     base_unit_id:Number(document.getElementById('productBaseUnit').value),
     is_active:document.getElementById('productActive').checked
   };
-  const result=wasEditing
+  const result=editingProductId!==null
     ? await supabaseClient.from('products').update(payload).eq('id',editingProductId)
     : await supabaseClient.from('products').insert(payload);
-  saveBtn.disabled=false;saveBtn.textContent=wasEditing?'Simpan Perubahan':'Simpan Produk';
-  if(result.error){productFormMessage.style.color='var(--red)';productFormMessage.textContent='Gagal menyimpan: '+result.error.message;return;}
-  productFormMessage.style.color='var(--green)';productFormMessage.textContent=wasEditing?'Perubahan produk berhasil disimpan.':'Produk berhasil disimpan.';
-  resetProductForm();
-  await loadMasterData();
-  productForm.style.display='none';
+  saveBtn.disabled=false;
+  if(result.error){productFormMessage.style.color='var(--red)';productFormMessage.textContent='Gagal: '+result.error.message;return;}
+  resetProductForm(); await loadMasterData(); productForm.style.display='none';
 });
+
 const customerForm=document.getElementById('customerForm');
 const customerFormMessage=document.getElementById('customerFormMessage');
 let editingCustomerId=null;
 function resetCustomerForm(){
-  editingCustomerId=null;
-  customerForm.reset();
-  document.getElementById('customerCredit').value='0';
-  document.getElementById('customerTerm').value='14';
-  document.getElementById('customerActive').checked=true;
+  editingCustomerId=null; customerForm.reset(); document.getElementById('customerCredit').value='0';
+  document.getElementById('customerTerm').value='14'; document.getElementById('customerActive').checked=true;
   document.getElementById('customerFormTitle').textContent='Tambah Pelanggan';
-  document.getElementById('saveCustomerBtn').textContent='Simpan Pelanggan';
-  customerFormMessage.textContent='';
+  document.getElementById('saveCustomerBtn').textContent='Simpan Pelanggan'; customerFormMessage.textContent='';
 }
-document.getElementById('showCustomerFormBtn').addEventListener('click',()=>{
-  resetCustomerForm();
-  customerForm.style.display='block';
-  document.getElementById('customerName').focus();
-});
-document.getElementById('cancelCustomerBtn').addEventListener('click',()=>{
-  resetCustomerForm();
-  customerForm.style.display='none';
-});
+document.getElementById('showCustomerFormBtn').addEventListener('click',()=>{resetCustomerForm();customerForm.style.display='block';document.getElementById('customerName').focus();});
+document.getElementById('cancelCustomerBtn').addEventListener('click',()=>{resetCustomerForm();customerForm.style.display='none';});
 document.getElementById('customersBody').addEventListener('click',async(event)=>{
   const toggleButton=event.target.closest('[data-toggle-customer]');
   if(toggleButton){
     const customerId=toggleButton.getAttribute('data-toggle-customer');
     const currentlyActive=toggleButton.getAttribute('data-active')==='true';
-    const nextStatus=currentlyActive?'nonaktif':'aktif';
-    if(!confirm(`Yakin ingin mengubah pelanggan ini menjadi ${nextStatus}? Data pelanggan dan riwayat transaksinya tidak dihapus.`))return;
-    if(!supabaseClient){document.getElementById('masterStatus').style.color='#b42318';document.getElementById('masterStatus').textContent='Koneksi Supabase belum siap. Muat ulang halaman dan login kembali.';return;}
-    toggleButton.disabled=true;toggleButton.textContent='Menyimpan...';
+    if(!confirm(`Ubah status pelanggan menjadi ${currentlyActive?'nonaktif':'aktif'}?`))return;
     const {error}=await supabaseClient.from('customers').update({is_active:!currentlyActive}).eq('id',customerId);
-    if(error){toggleButton.disabled=false;toggleButton.textContent=currentlyActive?'Nonaktifkan':'Aktifkan';document.getElementById('masterStatus').style.color='#b42318';document.getElementById('masterStatus').textContent='Gagal mengubah status pelanggan: '+error.message;return;}
-    document.getElementById('masterStatus').style.color='#12815d';document.getElementById('masterStatus').textContent='Status pelanggan berhasil diubah.';
-    await loadMasterData();
-    return;
+    if(error){alert('Gagal mengubah status: '+error.message);return;}
+    await loadMasterData(); return;
   }
   const button=event.target.closest('[data-edit-customer]');
   if(!button)return;
-  if(!supabaseClient){customerFormMessage.style.color='var(--red)';customerFormMessage.textContent='Koneksi Supabase belum siap. Muat ulang halaman dan login kembali.';return;}
   const customerId=button.getAttribute('data-edit-customer');
-  button.disabled=true;
   const {data,error}=await supabaseClient.from('customers').select('id,customer_code,name,phone,address,credit_limit,payment_term_days,is_active').eq('id',customerId).single();
-  button.disabled=false;
-  if(error){document.getElementById('masterStatus').style.color='#b42318';document.getElementById('masterStatus').textContent='Gagal membuka pelanggan: '+error.message;return;}
+  if(error){alert('Gagal membuka pelanggan: '+error.message);return;}
   editingCustomerId=data.id;
   document.getElementById('customerCode').value=data.customer_code||'';
   document.getElementById('customerName').value=data.name||'';
@@ -491,18 +1128,11 @@ document.getElementById('customersBody').addEventListener('click',async(event)=>
   document.getElementById('customerActive').checked=!!data.is_active;
   document.getElementById('customerFormTitle').textContent='Edit Pelanggan';
   document.getElementById('saveCustomerBtn').textContent='Simpan Perubahan';
-  customerFormMessage.textContent='';
   customerForm.style.display='block';
-  document.getElementById('customerName').focus();
-  customerForm.scrollIntoView({behavior:'smooth',block:'start'});
 });
 customerForm.addEventListener('submit',async(event)=>{
   event.preventDefault();
-  if(!supabaseClient){customerFormMessage.style.color='var(--red)';customerFormMessage.textContent='Koneksi Supabase belum siap. Muat ulang halaman dan login kembali.';return;}
-  const saveBtn=document.getElementById('saveCustomerBtn');
-  const wasEditing=editingCustomerId!==null;
-  saveBtn.disabled=true;saveBtn.textContent='Menyimpan...';
-  customerFormMessage.style.color='var(--muted)';customerFormMessage.textContent=wasEditing?'Menyimpan perubahan pelanggan...':'Menyimpan pelanggan ke database...';
+  const saveBtn=document.getElementById('saveCustomerBtn'); saveBtn.disabled=true;
   const details={
     name:document.getElementById('customerName').value.trim(),
     phone:document.getElementById('customerPhone').value.trim()||null,
@@ -511,18 +1141,15 @@ customerForm.addEventListener('submit',async(event)=>{
     payment_term_days:Number(document.getElementById('customerTerm').value||0),
     is_active:document.getElementById('customerActive').checked
   };
-  const result=wasEditing
+  const result=editingCustomerId!==null
     ? await supabaseClient.from('customers').update(details).eq('id',editingCustomerId)
     : await supabaseClient.from('customers').insert({...details,customer_code:null});
-  saveBtn.disabled=false;saveBtn.textContent=wasEditing?'Simpan Perubahan':'Simpan Pelanggan';
-  if(result.error){customerFormMessage.style.color='var(--red)';customerFormMessage.textContent='Gagal menyimpan: '+result.error.message;return;}
-  customerFormMessage.style.color='var(--green)';customerFormMessage.textContent=wasEditing?'Perubahan pelanggan berhasil disimpan.':'Pelanggan berhasil disimpan.';
-  resetCustomerForm();
-  await loadMasterData();
-  customerForm.style.display='none';
+  saveBtn.disabled=false;
+  if(result.error){customerFormMessage.style.color='var(--red)';customerFormMessage.textContent='Gagal: '+result.error.message;return;}
+  resetCustomerForm(); await loadMasterData(); customerForm.style.display='none';
 });
 
-// Supabase authentication: publishable key only; never place service_role/secret keys in the browser.
+// Otentikasi Supabase
 let supabaseClient = null;
 const authGate = document.getElementById('authGate');
 const authMessage = document.getElementById('authMessage');
@@ -545,27 +1172,27 @@ function showAuthenticatedUser(profile, user){
 }
 async function checkProfileAndShow(user){
   const {data: profile, error} = await supabaseClient.from('profiles').select('full_name, role, is_active').eq('id',user.id).maybeSingle();
-  if(error){setAuthMessage('Login berhasil, tetapi profil belum dapat dibaca. Periksa kebijakan akses profiles di Supabase. Detail: '+error.message);return;}
-  if(!profile){setAuthMessage('Akun berhasil login, tetapi profil belum ditemukan di tabel profiles. Hubungi administrator untuk menyiapkan profil.');return;}
-  if(profile.is_active !== true){setAuthMessage('Akun ini belum aktif. Hubungi Owner.');return;}
+  if(error){setAuthMessage('Login berhasil, tetapi profil belum dapat dibaca: '+error.message);return;}
+  if(!profile){setAuthMessage('Profil pengguna tidak ditemukan.');return;}
+  if(profile.is_active !== true){setAuthMessage('Akun belum aktif.');return;}
   showAuthenticatedUser(profile,user);
 }
 try {
   if(typeof SUPABASE_URL === 'undefined' || typeof SUPABASE_PUBLISHABLE_KEY === 'undefined' || !SUPABASE_URL || !SUPABASE_PUBLISHABLE_KEY || SUPABASE_PUBLISHABLE_KEY.includes('TEMPEL_PUBLISHABLE')) {
-    setAuthMessage('Konfigurasi Supabase belum lengkap. Periksa file supabase-config.js di repository GitHub.');
+    setAuthMessage('Konfigurasi Supabase belum lengkap di supabase-config.js');
   } else if(!window.supabase || !window.supabase.createClient) {
-    setAuthMessage('Library Supabase belum berhasil dimuat. Periksa koneksi internet lalu muat ulang halaman.');
+    setAuthMessage('Library Supabase belum dimuat.');
   } else {
     supabaseClient=window.supabase.createClient(SUPABASE_URL,SUPABASE_PUBLISHABLE_KEY);
     supabaseClient.auth.getSession().then(({data,error})=>{
-      if(error){setAuthMessage('Gagal memeriksa sesi: '+error.message);return;}
+      if(error){setAuthMessage('Sesi gagal: '+error.message);return;}
       if(data.session) checkProfileAndShow(data.session.user);
     });
   }
 } catch(e) { setAuthMessage('Koneksi belum siap: '+e.message); }
 document.getElementById('loginForm').addEventListener('submit',async (event)=>{
   event.preventDefault();
-  if(!supabaseClient){setAuthMessage('Konfigurasi Supabase belum siap. Periksa file supabase-config.js.');return;}
+  if(!supabaseClient){setAuthMessage('Supabase belum siap.');return;}
   loginButton.disabled=true;loginButton.textContent='Memeriksa...';setAuthMessage('',false);
   const email=document.getElementById('loginEmail').value.trim();
   const password=document.getElementById('loginPassword').value;
