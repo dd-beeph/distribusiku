@@ -13,10 +13,15 @@ function showPage(p){
   document.getElementById('topTitle').textContent=names[p]||p;
   window.scrollTo(0,0);
   if(innerWidth<=650)document.querySelector('.side').style.display='none';
-  if(p==='master'&&supabaseClient)loadMasterData();
-  if(p==='sales'&&supabaseClient){loadSalesOrders();loadSoStockSummary();}
-  if(p==='deliveries'&&supabaseClient){loadDeliveries();}
-  if(p==='invoices'&&supabaseClient){loadInvoices();}
+  
+  // Pemanggilan Fungsi Aman (Safe Invocation)
+  if(p==='master'&&supabaseClient&&typeof loadMasterData==='function') loadMasterData();
+  if(p==='sales'&&supabaseClient){
+    if(typeof loadSalesOrders==='function') loadSalesOrders();
+    if(typeof loadSoStockSummary==='function') loadSoStockSummary();
+  }
+  if(p==='deliveries'&&supabaseClient&&typeof loadDeliveries==='function') loadDeliveries();
+  if(p==='invoices'&&supabaseClient&&typeof loadInvoices==='function') loadInvoices();
 }
 
 document.querySelectorAll('button[data-page]').forEach(b=>b.addEventListener('click',()=>showPage(b.dataset.page)));
@@ -101,7 +106,7 @@ try {
   }
 } catch(e) { setAuthMessage('Koneksi belum siap: '+e.message); }
 
-document.getElementById('loginForm').addEventListener('submit',async (event)=>{
+document.getElementById('loginForm')?.addEventListener('submit',async (event)=>{
   event.preventDefault();
   if(!supabaseClient){setAuthMessage('Supabase belum siap.');return;}
   loginButton.disabled=true;loginButton.textContent='Memeriksa...';setAuthMessage('',false);
@@ -112,4 +117,3 @@ document.getElementById('loginForm').addEventListener('submit',async (event)=>{
   if(error){setAuthMessage('Login gagal: '+error.message);return;}
   await checkProfileAndShow(data.user);
 });
-
