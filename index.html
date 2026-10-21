@@ -1,6 +1,17 @@
 <!doctype html>
 <html lang="id">
 <head>
+<script>
+  // Tangkap eror skrip umum
+  window.onerror = function(message, source, lineno) {
+    alert("Detail Eror Skrip:\n" + message + "\n\nFile: " + source + "\nBaris: " + lineno);
+  };
+  // Tangkap eror dari fungsi Async / Supabase
+  window.onunhandledrejection = function(event) {
+    alert("Detail Eror Database/Async:\n" + (event.reason.message || event.reason));
+  };
+</script>
+
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>DistribusiKu — Dashboard</title>
 <link rel="stylesheet" href="css/styles.css">
@@ -263,9 +274,3 @@
 <script src="js/invoices.js"></script>
 </body>
 </html>
-<!-- Pemantau Eror Otomatis untuk Tablet -->
-<script>
-  window.onerror = function(message, source, lineno) {
-    alert("Terdeteksi Eror Aplikasi:\n\n" + message + "\n\nFile: " + source + "\nBaris: " + lineno);
-  };
-</script>
