@@ -380,13 +380,19 @@ async function printDeliveryDocument(id) {
   }
 }
 
-document.getElementById('deliveriesBody').addEventListener('click', e => {
-  const btn = e.target.closest('[data-deliv-action]');
-  if(!btn) return;
-  const id = btn.dataset.delivId;
-  const action = btn.dataset.delivAction;
-  if(action === 'invoice') openCashierInvoiceForm(id);
-  else if(action === 'view') viewDeliveryDetail(id);
-  else if(action === 'print') printDeliveryDocument(id);
+// Tambahkan event listener pada tabel pengiriman barang
+document.getElementById('deliveriesBody')?.addEventListener('click', function(e) {
+  const btn = e.target.closest('[data-delivery-action]');
+  if (!btn) return;
+  const id = btn.getAttribute('data-delivery-id');
+  const action = btn.getAttribute('data-delivery-action');
+
+  if (action === 'invoice') {
+    if (typeof createInvoiceFromDelivery === 'function') {
+      createInvoiceFromDelivery(id);
+    } else {
+      alert('Modul Faktur Penjualan belum siap.');
+    }
+  }
 });
 
