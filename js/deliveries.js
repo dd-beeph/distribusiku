@@ -380,19 +380,24 @@ async function printDeliveryDocument(id) {
   }
 }
 
-// Tambahkan event listener pada tabel pengiriman barang
-document.getElementById('deliveriesBody')?.addEventListener('click', function(e) {
-  const btn = e.target.closest('[data-delivery-action]');
-  if (!btn) return;
-  const id = btn.getAttribute('data-delivery-id');
-  const action = btn.getAttribute('data-delivery-action');
+// Penanganan Tombol Aksi Tabel Pengiriman Barang (Terintegrasi ke Invoices)
+const deliveriesBody = document.getElementById('deliveriesBody');
+if (deliveriesBody) {
+  deliveriesBody.addEventListener('click', function(e) {
+    const btn = e.target.closest('[data-delivery-action]');
+    if (!btn) return;
+    
+    const id = btn.getAttribute('data-delivery-id');
+    const action = btn.getAttribute('data-delivery-action');
 
-  if (action === 'invoice') {
-    if (typeof createInvoiceFromDelivery === 'function') {
-      createInvoiceFromDelivery(id);
-    } else {
-      alert('Modul Faktur Penjualan belum siap.');
+    if (action === 'invoice') {
+      if (typeof createInvoiceFromDelivery === 'function') {
+        createInvoiceFromDelivery(id);
+      } else {
+        alert('Modul Faktur Penjualan (invoices.js) belum siap.');
+      }
     }
-  }
-});
+  });
+}
+
 
