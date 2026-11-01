@@ -379,7 +379,6 @@ async function printDeliveryDocument(id) {
     win.document.body.innerHTML = 'Gagal memuat Dokumen Surat Jalan: ' + escHtml(error.message);
   }
 }
-
 // Penanganan Tombol Aksi Tabel Pengiriman Barang (Terintegrasi ke Invoices)
 const deliveriesBody = document.getElementById('deliveriesBody');
 if (deliveriesBody) {
@@ -399,5 +398,3 @@ if (deliveriesBody) {
     }
   });
 }
-
-
